@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>Linux Lite | Install Guide</title>
+</head>
+
+<body>
+    <div id="page">
+		
+        <div id="header">
+        	<h1>Linux Lite Manual</h1>
+            <ul>
+           	<li><a href="index.html">Home</a></li>
+               	<li><a href="install.html">Install Guide</a></li>
+                <li><a href="network.html">Network</a></li>
+                <li><a href="software.html">Software</a></li>
+                <li><a href="hardware.html">Hardware</a></li>
+            </ul>
+        </div>
+  
+        <div id="main">
+        
+        	<div class="main_top">
+            	<h1>Linux Lite Installation Guide</h1>
+            </div>
+            
+           	<div class="main_body">
+                <p>
+				<a href="#updates">Installing Linux Lite to your hard drive</a><br>
+				<a href="#adduser">Adding another User in the future</a><br>
+				<a href="#userdel">Removing a User</a><p>
+				<font size="4">Writing the Linux Lite ISO to a DVD</font><p>
+				Here is some free DVD burning software for you to select from:<p>
+				BurnAware Free -
+				<a target="_blank" href="http://www.burnaware.com">
+				http://www.burnaware.com</a><p>
+				CDBurnerXP - <a target="_blank" href="http://cdburnerxp.se/">
+				http://cdburnerxp.se/</a><p>ImgBurn -
+				<a target="_blank" href="http://www.imgburn.com/">
+				http://www.imgburn.com/</a><p>Place a blank DVD in your DVD 
+				drive, open up the program, select the iso file that you want to 
+				burn. Choose the lowest burn speed, this will greatly reduce the 
+				risk of your burn becoming corrupt as can sometimes happen. A 4x 
+				speed is recommended if you have it.<p>
+				<br>
+				<font size="4">Writing the Linux Lite ISO to USB using software</font><p>
+				<span style="font-weight: bold;">Unetbootin:</span><br>
+				UNetbootin allows you to create bootable Live USB drives. Unetbootin is available for Windows, Mac and Linux. 
+				Download and 
+				follow instructions from here -
+				<a target="_blank" href="http://unetbootin.sourceforge.net/">
+				http://unetbootin.sourceforge.net/</a><p>
+				<font size="4"><br>
+				Writing the Linux Lite ISO to USB using a terminal in Linux</font><p>
+				To find out the letter of your usb stick, open a terminal and type:
+				<span style="font-weight: bold;">df -h</span> It is usually 
+				listed as &#39;<b>media</b>&#39; or similar.<br>
+				Be very careful to make sure you choose the right drive letter, 
+				as you can see in the <b>Filesystem</b> column, my device is<b> 
+				sdb</b> another clue is the value in the <b>Size </b>column, here it
+				is shown as <b>15G</b>. In this example my device is an Apacer <b>
+				15gb</b> USB stick.<p>
+				<img border="0" src="img/df-h.png" width="483" height="279"><p>
+				<br>
+				Open a folder and make sure you are in the directory that the 
+				iso file is in. Open a terminal in that directory and type the following:<table border="0" width="800" id="table1" bgcolor="#FFFF55">
+					<tr>
+						<td><b>sudo dd if=linux-lite-1.0.6-alpha-preview-32bit.iso of=/dev/sdx 
+				bs=4M</b></td>
+					</tr>
+				</table>
+				<p>
+				&nbsp;<p>
+				where &#39;<b>x</b>&#39; is the letter of your usb device.<p>
+				The Live DVD/USB image will boot into the desktop automatically, 
+				there is no need to login manually.<br>
+				If you need the sudo password, it is: <b>linuxlite</b><hr>
+				<p>
+				&nbsp;<p>
+				<font size="4"><a name="updates"></a>Installing Linux Lite to your hard drive</font><p>
+				Now that you&#39;ve had a look around Linux Lite, we&#39;re ready to 
+				install it to your hard drive.<p>
+				The first step is to double click on the <b>Install Linux Lite</b> 
+				icon on your Desktop.<p>
+				pic-here<p>
+				To be written.<hr>
+				<p>
+				&nbsp;<p>
+				<font size="4"><a name="adduser"></a>Adding another User</font><p>
+				To add another user, open up a <b>Terminal</b> and type in the 
+				following:<table border="0" width="800" id="table2" bgcolor="#FFFF55">
+					<tr>
+						<td><b>sudo adduser name</b></td>
+					</tr>
+				</table>
+				<p>
+				<br>
+				where<b> name</b> is the name of your new user. The only details 
+				you will need to enter is:<p>
+				your sudo password<br>
+				<b>Enter new UNIX password:<br>
+				Retype new UNIX password:</b><p>
+				All the other details are voluntary and not necessary.<p>
+				<b>Is the information correct? [Y/]</b> (press enter if they are 
+				correct)<p>
+				<img border="0" src="img/adduser.png" width="515" height="398"><table border="0" width="800" id="table3" bgcolor="#FFFF55">
+					<tr>
+						<td><b>NOTE: If you have already enabled auto login 
+						for another user, you will need to disable it so that 
+						your new user can login. If you don&#39;t want to disable 
+						auto login for yourself, you can click on &#39;Menu, Lock 
+						Screen&#39; choose &#39;New Login&#39; from the locked screen and 
+						the newly created user can then login. Only one user can 
+						have auto login enabled at a time.</b></td>
+					</tr>
+				</table>
+				<p>
+				<br>
+				<font size="4"><a name="userdel"></a>Removing a User</font><p>
+				To remove a user, open up a <b>Terminal</b> and type in the 
+				following:<table border="0" width="800" id="table4" bgcolor="#FFFF55">
+					<tr>
+						<td><b>sudo userdel name</b></td>
+					</tr>
+				</table>
+				<p>
+				<br>
+				enter your sudo password and where<b> name</b> is the name of 
+				the user you want to remove.<br>
+				If you want to remove their home directory as well (make sure you 
+				backup any files you want to save first)<table border="0" width="800" id="table5" bgcolor="#FFFF55">
+					<tr>
+						<td><b>sudo userdel -r name<br>
+						<br>
+						if you get a message saying they are still logged in, 
+						try:<br>
+						<br>
+						sudo userdel -r -f name</b></td>
+					</tr>
+				</table>
+				<p>
+				<br>
+				enter your sudo password and replace<b> name</b> with the name of 
+				the user you want to remove.<p>
+				&nbsp;</div>
+            
+           	</body>
+</html>
+
+ <!--
+Design by Bryant Smith
+http://www.bryantsmith.com
+http://www.aszx.net
+email: templates [-at-] bryantsmith [-dot-] com
+Released under Creative Commons Attribution 2.5 Generic.  In other words, do with it what you please; but please leave the link if you'd be so kind :)
+
+Name       : The Slant
+Version    : 1.0
+Released   : 2009-07-25
+-->
