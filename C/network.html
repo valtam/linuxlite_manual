@@ -70,12 +70,48 @@
 				System, Network Share Settings</font></b></p>
 				<p>Assuming you have already set up shares on your Windows 
 				computer, please read through the following guide.<br>
-				Accessing your existing Windows shares is simple. First step, we 
+				Accessing your existing <b>Linux Lite shares from Windows</b> is simple. First step, we 
 				need to set up your Linux Lite shares.</p>
 				<p>Create a folder in your home folder and place into it files 
 				that you want to share with your Windows computer.</p>
 				<p>Right click on your home folder, <b>Create Folder</b>. Now 
 				give your new folder a name, in this example we&#39;ll use the name &#39;<b>share</b>&#39;.</p>
+				<p>Next we need to tell Windows who we are going to login is as 
+				to access our Linux Lite shares.<br>
+				Open up a terminal and type:</p>
+				<table border="0" width="800" id="table6" bgcolor="#FFFF55">
+					<tr>
+						<td>sudo smbpasswd -a <b>name</b></td>
+					</tr>
+				</table>
+				<p><br>
+				where <b>name</b> is your Linux Lite username.<br>
+				After that, you&#39;ll be asked to enter your Linux Lite password 
+				twice.</p>
+				<p>Now, in the same terminal do:</p>
+				<table border="0" width="800" id="table7" bgcolor="#FFFF55">
+					<tr>
+						<td>sudo leafpad /etc/samba/smbusers</td>
+					</tr>
+				</table>
+				<p><br>
+				where you see:</p>
+				<table border="0" width="800" id="table8" bgcolor="#FFFF55">
+					<tr>
+						<td>&lt;name&gt; = “&lt;name&gt;”</td>
+					</tr>
+				</table>
+				<p><br>
+				replace name with your Linux Lite username in each of the 
+				brackets, eg.</p>
+				<table border="0" width="800" id="table9" bgcolor="#FFFF55">
+					<tr>
+						<td>&lt;bob&gt; = “&lt;bob&gt;”</td>
+					</tr>
+				</table>
+				<p><br>
+				<b>Save</b> and <b>Close</b> the file, and close the terminal. 
+				You will only ever need to do this part <b>once</b>.</p>
 				<p>Now click on <b>Menu, System, Network Share Settings, Edit 
 				Network Shares</b>, and 
 				follow very carefully the onscreen instructions. Do not miss any 
@@ -86,21 +122,31 @@
 					<tr>
 						<td>#======================= Global Settings 
 						====================================<br>
-				[global]<br>
-				workgroup = <b>WORKGROUP</b><br>
-				server string = Linux Lite Shares<br>
-				netbios name = $HOSTNAME<br>
-				security = user<br>
-				map to guest = bad user<br>
-				dns proxy = no<br>
+						[global]<br>
+						workgroup = <b>WORKGROUP</b><br>
+						server string = Linux Lite Shares<br>
+						netbios name = <b>linuxlite</b><br>
+						security = user<br>
+						encrypt passwords = true<br>
+						username map = /etc/samba/smbusers<br>
+						map to guest = bad user<br>
+						guest account = nobody<br>
+						dns proxy = no<br>
 						#======================= Share Definitions 
-				===================================<br>
-				[linuxliteshare]<br>
-				path = /home/$USER/<b>share</b><br>
-				browsable = yes<br>
-				writable = yes<br>
-				guest ok = yes<br>
-				read only = no</td>
+						===================================<br>
+						[linuxliteshare]<br>
+						path = /home/%U/<b>share</b><br>
+						available = yes<br>
+						valid users = %U %G<br>
+						write list = %U<br>
+						browsable = yes<br>
+						public = no<br>
+						writable = yes<br>
+						guest ok = no<br>
+						read only = no<br>
+						printable = no<br>
+						locking = no<br>
+						strict locking = no</td>
 					</tr>
 				</table>
 				<p>&nbsp;</p>
@@ -109,10 +155,24 @@
 				</b>You only need to change:</p>
 				<table border="0" width="800" id="table3" bgcolor="#FFFF55">
 					<tr>
-						<td><b>WORKGROUP - </b>Change this to the workgroup name 
-						of your Windows computer.<b><br>
-						</b>path = /home/$USER/<b>share</b> - change <b>share</b> 
-						to the name of the folder you created earlier.</td>
+						<td><b>WORKGROUP</b> - must equal the workgroup name on 
+						the Windows machine.<br>
+						<br>
+						<b>netbios name</b> is the name of the Linux Lite 
+						computer, eg. in a terminal where you see,<br>
+						<br>
+						<b>bob@linuxlite:~$</b><br>
+						<br>
+						<b>linuxlite</b> is the <b>netbios name</b>.<br>
+						<br>
+						<b>path =</b> the path to your share folder on Linux 
+						Lite that we want Windows to see, <b>ONLY</b> change the 
+						last name eg. /home/%U/<b>share<br>
+						share </b>is the name of the folder on Linux Lite you 
+						are sharing in your home folder. %U is the same as your 
+						username, leave the %U as it is. Now change the <b>ONLY</b> 
+						the word <b>share</b> to the name of the folder you 
+						created in the first step of this tutorial.</td>
 					</tr>
 				</table>
 				<p>&nbsp;</p>
@@ -135,40 +195,87 @@
 						<td>#======================= Global Settings 
 						====================================<br>
 						[global]<br>
-						workgroup = <b>WORKGROUP</b><br>
+						workgroup = WORKGROUP<br>
 						server string = Linux Lite Shares<br>
-						netbios name = $HOSTNAME<br>
+						netbios name = lappy<br>
 						security = user<br>
+						encrypt passwords = true<br>
+						username map = /etc/samba/smbusers<br>
 						map to guest = bad user<br>
+						guest account = nobody<br>
 						dns proxy = no<br>
 						#======================= Share Definitions 
 						===================================<br>
 						[linuxliteshare]<br>
-						path = /home/$USER/<b>share</b><br>
+						path = /home/%U/share<br>
+						available = yes<br>
+						valid users = %U %G<br>
+						write list = %U<br>
 						browsable = yes<br>
+						public = no<br>
 						writable = yes<br>
-						guest ok = yes<br>
+						guest ok = no<br>
 						read only = no<br>
+						printable = no<br>
+						locking = no<br>
+						strict locking = no<br>
 						<br>
-						[linuxlitesharevideos]<br>
-						path = /home/$USER/<b>Videos</b><br>
+						[linuxliteshareVideos]<br>
+						path = /home/%U/Videos<br>
+						available = yes<br>
+						valid users = %U %G<br>
+						write list = %U<br>
 						browsable = yes<br>
+						public = no<br>
 						writable = yes<br>
-						guest ok = yes<br>
+						guest ok = no<br>
 						read only = no<br>
+						printable = no<br>
+						locking = no<br>
+						strict locking = no<br>
 						<br>
-						[linuxlitesharedocuments]<br>
-						path = /home/$USER/<b>Documents</b><br>
+						[linuxliteshareDownloads]<br>
+						path = /home/%U/Downloads<br>
+						available = yes<br>
+						valid users = %U %G<br>
+						write list = %U<br>
 						browsable = yes<br>
+						public = no<br>
 						writable = yes<br>
-						guest ok = yes<br>
-						read only = no</td>
+						guest ok = no<br>
+						read only = no<br>
+						printable = no<br>
+						locking = no<br>
+						strict locking = no</td>
 					</tr>
 				</table>
 				<p>&nbsp;</p>
 				<p>Don&#39;t forget to do <b>Menu, System, Network 
 				Share Settings, Restart Network Share Services</b> to apply the 
 				new share settings.</p>
+				<p><b><font size="4">Accessing you Linux Lite Shares from 
+				Windows</font></b></p>
+				<p>Go to your Windows machine, in this example we&#39;ll use Windows 
+				XP.</p>
+				<p>Click on <b>Start, Run</b> and type in the netbios name of 
+				your Linux Lite computer preceded by 2 backslashes:</p>
+				<p><b>eg. <a href="file://192.168.0.3">\\lappy</a></b></p>
+				<p>
+				<img border="0" src="img/access_ll3.png" width="354" height="185"></p>
+				<p>A username and password dialogue box will pop up, enter in 
+				the user and password we created earlier.</p>
+				<p>
+				<img border="0" src="img/access_ll2.png" width="333" height="287"></p>
+				<p>And here we see our Linux Lite computer share folder:</p>
+				<p>
+				<img border="0" src="img/access_ll1a.png" width="559" height="383"></p>
+				<p>All that&#39;s left to do is to double click on the Linux Lite 
+				share and we will be inside the share folder. Now you can copy 
+				and paste files to your Linux Lite computer.</p>
+				<p>
+				<img border="0" src="img/access_ll1.png" width="559" height="381"></p>
+				<p><b><font size="4">Accessing your Windows shares from Linux 
+				Lite</font></b></p>
 				<p>Go to your Windows machine and find the ip address. To do 
 				this, open a command prompt and type in <b>ipconfig</b>.</p>
 				<p>
@@ -195,10 +302,11 @@
 				<p>If everything went to plan, you should now be prompted for 
 				your Windows username, domain or workgroup and your Windows 
 				password.</p>
+				<p><b>Windows username - Windows workgroup name - Windows 
+				password</b></p>
 				<p>
 				<img border="0" src="img/smb_password.png"></p>
-				<p>Now you can copy and paste files between computers in your 
-				new <b>share</b> folder.</p>
+				<p>Now you can copy and paste files to your Windows computer.</p>
 				<p>
 				<img border="0" src="img/smb_shares.png"></p>
 				<p>&nbsp;</p>
