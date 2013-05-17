@@ -29,8 +29,9 @@
            	<div class="main_body">
                 <p><a href="#updates">Updates</a><br>
 				<a href="#sources">Change your Software Updates Country Location</a><br>
+				<a href="#ppa">Adding a PPA</a><br>
 				<a href="#deskenv">A word on changing Desktop Environments</a></p>
-				<p><b><font size="4">Installing Software:</font></b></p>
+				<p><b><font size="4">Installing Software</font></b></p>
 				<p>Linux Lite uses the Synaptic Package Manager to manage 
 				software.</p>
 				<p>To install software use the following steps:</p>
@@ -80,7 +81,7 @@
 				safe to uninstall the software. Synaptic is pretty good at 
 				warning you should there be any potential problems.</p><hr>
 				<p>&nbsp;</p>
-				<p><b><a name="updates"><font size="4">Updates</font></a><font size="4">:</font></b></p>
+				<p><b><a name="updates"><font size="4">Updates</font></a></b></p>
 				<p>Keeping Linux Lite up to date is a simple process.</p>
 				<p>At the top of your <b>Menu</b>, you will see <b>Install 
 				Updates</b>.</p>
@@ -124,10 +125,50 @@
 				<p><img border="0" src="img/software/sources-reload2.png"></p>
 				<p>You should now have faster downloads for updates and software 
 				installs in <b>Synaptic Package Manager</b> from a location much 
-				nearer you.</p><a/><hr>
+				nearer you.</p><hr>
+				<p>&nbsp;</p>
+				<p><b><font size="4"><a name="ppa"></a>Adding a PPA</font></b></p>
+				<p>A PPA is a repository containing one or more applications. 
+				These are often set up for new software programs or updated 
+				versions of some applications. To add a new PPA to your system, 
+				follow the guide below.</p>
+				<p>Go to <b>Menu, System, Install/Remove Programs</b>. Enter 
+				your password when asked.</p>
+				<p><img border="0" src="img/software/ppa1.png"></p>
+				<p>Go to <b>Settings, Repositories</b>.</p>
+				<p><img border="1" src="img/software/ppa2.png"></p>
+				<p>Click on the <b>Other Software</b> tab and click on the <b>Add
+				</b>(bottom left) button and paste into the box the address of 
+				the PPA.<br>
+				In this example, we are going to add <b>Spotify</b> to our 
+				system. Now click on <b>Add Source</b>. To finish, click on <b>
+				Close</b>.<br>
+				Close <b>Synaptic Package Manager</b>.</p>
+				<p><img border="0" src="img/software/ppa3.png"></p>
+				<p>Each PPA comes with a signed key. This is a security measure 
+				and ensures that the person who created the PPA has followed 
+				strict standards. Open up a terminal and type in the key string:</p>
+				<table border="0" width="800" id="table1" bgcolor="#FFFF55">
+					<tr>
+						<td><b>sudo apt-key adv --keyserver keyserver.ubuntu.com 
+						--recv-keys 94558F59</b></td>
+					</tr>
+				</table>
+				<p>&nbsp;</p>
+				<p><img border="0" src="img/software/ppa4.png"></p>
+				<p>Now in the same terminal type in: <b>sudo apt-get update &amp;&amp; 
+				sudo apt-get install spotify-client</b> (example below):</p>
+				<p><img border="0" src="img/software/ppa5.png"></p>
+				<p>This will update your sources to include the new Spotify 
+				repository. The second part of the command will install Spotify 
+				for you. Your new program is now installed and ready to use.</p>
+				<p>
+				<img border="0" src="img/software/ppa6.png" width="763" height="415"></p>
+				<p>&nbsp;</p><a/><hr>
 				<p>&nbsp;</p>
 				<p>
-				<b><font size="4"><a name="deskenv">Changing Desktop Environments:</font></a></b></p>
+				<b><font size="4"></font></b>
+				<b><font size="4"><a name="deskenv">Changing Desktop Environments</a></font></b></p>
 				<p>
 				This distro is a heavily modified version of the XFCE desktop 
 				environment. However, being GNU/Linux based allows people the 
