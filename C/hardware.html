@@ -57,7 +57,7 @@
 <br>
 <img border="0" src="img/hardware/icons.png"><br>
 <br>
-2.  Hovering over the icon will show you the volume currently set, If you left click it will toggle mute and unmute for the Master volume.
+2.  Hovering over the icon will show you the volume currently set, If you left click it will toggle mute and unmute for the Master volume. Volume can also be adjusted up and down my using your mouse scroll wheel while hovering over the icon. Scrolling up brings the master volume up, and down accordingly.
 <br>
 <br>
 <img border="0" src="img/hardware/audio2.png"><br>
@@ -73,29 +73,38 @@ Generally You will not need to adjust any of the settings aside from selecting S
 </p>
 
 <p>
-5. If your unable to hear any sound, you would need to check the audio settings with alsamixer.<br>
+5. If your unable to hear any sound, or you just want to check and adjust settings. You would need to open the audio settings with <b>PulseAudio Volume Control</b>.<br>
 <br>
-Type the following into a Terminal window. (Located under the Accessories section of the Menu.)<br>
-<table border="0" width="800" bgcolor="#FFFF55">
-<tr>
-<td><b>alsamixer</b></td>
-</tr>
-</table>
-</p>
-<p>
+Nagigate to the <b>Menu</b> Under the <b>Multimedia</b> Section locate and open <b>PulseAudio Volume Control</b><br>
 <br>
-<img border="0" src="img/hardware/audio1.png"><br><br>
-6. If your sound card doesn&#39;t appear to be the default, You can toggle this by selecting the proper card and pressing F6.<br><br>
-7. You have a few choices of what to view, Playback (pressing F3) and Capture (Pressing F4). For our 
-purposes you'll be pressing the F3 key and looking at master, or any other choices focusing on the lower part of the meters. You'll want to see OO if it displays MM your device and muted, to toggle this press the m key. To adjust sound levels in this case you simple press the up and down keys accordingly. This method can be used for both out going audio and incoming. For example some people need to 
-manually adjust volume for a microphone to do this press F4. You can then toggle mute and adjust volume for your needs.<br>
+<img border="0" src="img/hardware/audio10.png"><br>
+<br>
+6. You will be brought to a window similar to this one. On the tabs you will see <b>Playback</b>, for adjusting the volume of programs currently playing or capable of playback. <b>Recording</b> for programs currently using recording devices, namely your microphone. <b>Output Devices</b> is for main configuration of sound levels across your system. <b>Configuration</b> Is used for selecting Profiles and misc settings.<br>
+<img border="0" src="img/hardware/audio11.png"><br>
+<br>
+7. In the window above you can adjust volume settings for output. Using the blue sliding bars. You can toggle mute with the speaker icon <img border="0" src="img/hardware/audio19.png"> It will change it's background color when active <img border="0" src="img/hardware/audio18.png">. You can lock channels using <img border="0" src="img/hardware/audio20.png"> So that when volume is raised or lowered its done equaly. Or you can toggle and set the volume to be louder on one side. The <img border="0" src="img/hardware/audio21.png"> icon is used to specify the default deviced used by pulse audio. <br>
+<br>
+8. <b>Input Devices</b>, this includes Microphones and other line in devices, such as TV tuner cards with line in etc. Adjusting the levels and settings are the same method as described above in section 7.<br>
+<img border="0" src="img/hardware/audio12.png"><br>
 
+<br>
+9. <b>Configuration</b>, this lists known profiles for your sound card. In most cases there is no need to select anything here unless you intend to disable your sound completely, or have a unique profile setting. Such as surround sound, mono, or stero out.<br>
+<img border="0" src="img/hardware/audio13.png"><br>
+
+<br>
+10. <b>Recording</b>, will list programs currently in using an input method, be it line in or a microphone. You can toggle access per program or and adjust volume per program here. The method used is the same as mentioned in section 7.<br>
+<img border="0" src="img/hardware/audio15.png"><br>
+<br>
+11. <b>Playback</b>, will list programs currently producing audio or able to. You can toggle access per program or and adjust volume per program here. The method used is the same as mentioned in section 7.<br>
+<img border="0" src="img/hardware/audio14.png"><br>
+<br>
+12. <b>Notes</b>: Being able to toggle on mute and unmute on multiple things can cause issues. And at times the device may be muted upon install. Show caution here as you may mute a certain program and forget about it entirely. If unmuting and adjusting settings for your sound card and related programs do not work at all, there may be a driver issue. Refer below for resources on how to remedy this. You can find help by using the <b><a href="#report">Create System Report tool</a></b> And using the directions to upload the generated report to the forums.<br>
 
 
 <p><b>Resources for Audio Drivers</b></p>
 <p>
 <a href="https://help.ubuntu.com/community/Sound">Ubuntu Wiki</a> Contains a list of guides to configuring specific drivers for older and odd sets of sound cards.<br>
-
+<a href="https://help.ubuntu.com/community/SoundTroubleshooting">Ubuntu Wiki</a> Contains steps to help trouble shoot and configure sound cards.<br>
 <a href="http://www.halfgaar.net/surround-sound-in-linux">Halfgaar</a> Has a great guide to setting up surround sound under linux.</p>
 				<p>
 <a href="#top">Top of page</a></p><hr>
@@ -161,8 +170,7 @@ However <b>Description</b> and <b>Location</b> are not required, unless you shar
 <a href="http://www.openprinting.org/printers">Open Printing</a> Printer listing. Driver listing can also be found <a href="http://www.openprinting.org/drivers">here</a><br>
 <a href="http://hplipopensource.com/hplip-web/supported_devices/combined.html">HP</a> 
 Compatible printers can be found here.<br>
-<a href="https://wiki.ubuntu.com/HardwareSupportComponentsPrinters">Ubuntu's</a> Wiki also contains a list of known working and 
-compatible drivers and printers.</p>
+<a href="https://wiki.ubuntu.com/HardwareSupportComponentsPrinters">Ubuntu's</a> Wiki also contains a list of known working and compatible drivers and printers.</p>
 				<p>
 <a href="#top">Top of page</a></p><hr>
 				<p>
@@ -193,7 +201,7 @@ XFCE wiki</a></p><hr>
 The Create System Report tool was created to better help people who experienced 
 a problem with their computer. The report contains useful information about the 
 hardware, network and software. The idea of the tool is to run it, then you 
-would attach it to a Forum thread with a title about the issue you are having. 
+would attach the generated file to a Forum thread with a title about the issue you are having. 
 Lets get started.</p>
 				<p>
 
