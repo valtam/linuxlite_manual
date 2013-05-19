@@ -43,7 +43,67 @@
 				<p><b>Graphics - Intel</b></p>
 				<p>To be written.</p>
 				<p><b>Graphics - ATI</b></p>
-				<p>To be written.</p>
+				<p>If you&#39;re not sure whether or not you have ATI graphics, open 
+				up a terminal and run this command:</p>
+				<p><b>sudo lshw -C display</b></p>
+				<p><img border="0" src="img/hardware/ati1.png"></p>
+				<p>You can see that under product: there is a reference to 
+				Radeon, a brand of ATI.<br>
+				<br>
+				<b>NOTE: You must be connected to the internet before you start 
+				the driver install.</b></p>
+				<p>The next step is to go to <b>Menu, System, Install Drivers</b>.</p>
+				<p><img border="0" src="img/hardware/ati2.png"></p>
+				<p>You will be asked to enter your password.</p>
+				<p><img border="0" src="img/hardware/ati3.png"></p>
+				<p>The program will then scan your computer for any drivers that 
+				you may need.</p>
+				<p><img border="0" src="img/hardware/ati4.png"></p>
+				<p>When it has finished scanning, you will see a dialogue box 
+				similar to the one below.</p>
+				<p><img border="0" src="img/hardware/ati5.png"></p>
+				<p>For ATI, we would select: <b>ATI/AMD proprietary FGLRX 
+				graphics driver </b>(second in the list)<br>
+				If you plan to play Steam games in the future, select: <b>
+				ATI/AMD proprietary FGLRX graphics driver (**experimental** 
+				beta)</b> Now click on <b>Activate</b>.</p>
+				<p>When the driver has finished, click on <b>Close</b>.<br>
+				Now open up a terminal and type:<br>
+				<br>
+				<b>sudo aticonfig --initial -f<br>
+				<br>
+				</b>enter your password, when it has finished, restart your 
+				computer.</p>
+				<p>Now we need to make sure that our new <b>Menu</b> entries 
+				launch correctly. Go to <b>Menu, Settings, Main Menu</b>.</p>
+				<p><img border="0" src="img/hardware/ati6.png"></p>
+				<p>A new window will pop up, select <b>Settings</b> on the left 
+				then the first AMD menu entry on the right and click on <b>
+				Properties</b>.<br>
+				This will bring up a new window, edit each field so that it 
+				looks the same as in the picture below. When you have finished 
+				editing, click on <b>Save </b>on the<b> Edit launcher </b>
+				window.</p>
+				<p><img border="0" src="img/hardware/ati7.png"></p>
+				<p>Now click on the second AMD menu entry on the right and click 
+				on <b>Properties</b>.<br>
+				This will bring up a new window, edit each field so that it 
+				looks the same as in the picture below. When you have finished 
+				editing, click on <b>Save </b>on the<b> Edit launcher </b>
+				window. Now click on <b>Close</b> on the <b>Main Menu</b> 
+				window.</p>
+				<p><img border="0" src="img/hardware/ati8.png"></p>
+				<p>The <b>AMD Catalyst</b> menu item will let you configure your 
+				graphics, with limited access in the <b>Catalyst Control Center</b>.</p>
+				<p><img border="0" src="img/hardware/ati9.png"></p>
+				<p>The <b>AMD Catalyst Admin</b> will give you full access to 
+				all the settings in the <b>Catalyst Control Center</b> including 
+				options like&nbsp; Switchable Graphics option if you have it. 
+				You will need to enter your password to access this control 
+				panel.</p>
+				<p><img border="0" src="img/hardware/ati10.png"><br>
+&nbsp;</p><hr>
+				<p>&nbsp;</p>
 				<p><b>Graphics - NVIDIA</b></p>
 				<p>To be written.</p>
 				<p><b>Graphics - Other</b></p>
