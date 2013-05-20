@@ -28,12 +28,13 @@
             
            	<div class="main_body">
                 <p><a href="#sound">Sound Configuration</a><br>
-				<a href="#printer">Printer Setup</a><br>
-				<a href="#graphics">Graphic Drivers And Setup</a><br>
-				<a href="#wirelessdev">Wireless Devices</a><br>
+				<a href="#printer">Printer Setup</a><br><a href="#graphics">Graphic Drivers And Setup</a><br>
+&nbsp;- <a href="#intel">Intel</a><br>
+&nbsp;- <a href="#ati">ATI</a><br>
+&nbsp;- <a href="#nvidia">NVIDIA</a><br>
+&nbsp;- <a href="#optimus">NVIDIA-Optimus</a><br><a href="#wirelessdev">Wireless Devices</a><br>
 				<a href="#keyboard">Keyboard Hotkeys and Multimedia Keys</a><br>
-				<a href="#booting">Booting issues</a><br>
-				<a href="#report">Create System Report tool</a><br>
+				<a href="#booting">Booting issues</a><br><a href="#report">Create System Report tool</a><br>
 				<a href="#seekhelp">Finding more help</a></p>
 
             	<p><b><font size="5">Drivers</font></b></p>
@@ -42,12 +43,12 @@
 				<p>&nbsp;</p>
                 <p><b><font size="4"><a name="graphics"></a></font>
 				<font size="5">Graphics Drivers and Setup</font></b></p>
-				<p><b><font size="4">Graphics - Intel</font></b></p>
+				<p><b><font size="4"><a name="intel"></a>Graphics - Intel</font></b></p>
 				<p>To be written.</p>
 				<p>
 <a href="#top">Top of page</a></p><hr>
 				<p>&nbsp;</p>
-				<p><b><font size="4">Graphics - ATI</font></b></p>
+				<p><b><font size="4"><a name="ati"></a>Graphics - ATI</font></b></p>
 				<p>If you&#39;re not sure whether or not you have ATI graphics, open 
 				up a terminal and run this command:</p>
 				<p><b>sudo lshw -C display</b></p>
@@ -109,10 +110,27 @@
 				<p><img border="0" src="img/hardware/ati10.png"><br>
 &nbsp;</p><hr>
 				<p>&nbsp;</p>
-				<p><b><font size="4">Graphics - NVIDIA</font></b></p>
+				<p><b><font size="4"><a name="nvidia"></a>Graphics - NVIDIA</font></b></p>
 				<p>To be written.</p>
 				<p>
 <a href="#top">Top of page</a></p><hr>
+				<p>&nbsp;</p>
+				<p><b><font size="4"><a name="optimus"></a>Graphics - NVIDIA-Optimus</font></b></p>
+				<p>From a fresh install of Linux Lite, open up a terminal and 
+				type:</p>
+				<table border="0" width="800" id="table1" bgcolor="#FFFF55">
+					<tr>
+						<td><b>sudo add-apt-repository ppa:bumblebee/stable<br>
+						sudo apt-get update <br>
+						sudo apt-get install bumblebee virtualgl 
+						linux-headers-generic-lts-quantal</b></td>
+					</tr>
+				</table>
+				<p><br>
+				Now restart your computer.</p>
+				<p>
+<a href="#top">Top of page</a></p>
+				<hr>
 				<p>&nbsp;</p>
 				<p><b><font size="4">Graphics - Other</font></b></p>
 				<p>To be written.</p>
