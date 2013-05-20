@@ -268,8 +268,37 @@ You can find information for adding or modifying hotkeys (or shortcuts) on the
 				<p>&nbsp;</p>
 				<p><font size="4"><b><a name="booting"></a>Booting Issues</b></font></p>
 				<p><b>Black screen whilst trying to boot live DVD/USB</b></p>
-				<p>This is usually due to the graphics chip you have. 
-				Fortunately this can be overcome by editing the....</p>
+				<p>This is usually due to the graphics chip you have, it is 
+				easily remedied and the problem should not reappear once you 
+				have installed the <a href="#graphics">graphics drivers</a> for 
+				your computer. So first we need to boot you successfully into 
+				the desktop.</p>
+				<p>Hold down the shift key as you boot up your computer. You 
+				should see a screen like the following:</p>
+				<p>
+				<img border="0" src="img/installer/pass1.png"></p>
+				<p>Next press the <b>e</b> key whilst that top line is highlighted. This 
+				will take you to the next screen.<br>
+				Use your arrow keys to move down to the line highlighted in the 
+				picture below. Use the arrow key until you reach the end of that 
+				line.</p>
+				<p>
+				<img border="0" src="img/installer/pass2.png"></p>
+				<p>Press the backspace key repeatedly until you remove: <b>ro 
+				splash quiet $vt_handoff </b>and replace that<br>
+				text with:<b> nomodeset </b>so that it looks like the picture 
+				below.</p>
+				<p><img border="0" src="img/installer/pass8.png"></p>
+				<p>Now press either <b>F10</b> or <b>Ctrl+X</b> to boot your 
+				machine.<br>
+				Your computer will begin to boot up with scrolling text similar 
+				to what is shown below:</p>
+				<p><img border="0" src="img/installer/pass9.png"></p>
+				<p>After which shortly you will get your normal login screen. 
+				Now you can login and install your <a href="#graphics">graphics 
+				drivers</a>.</p>
+				<p><img border="0" src="img/installer/login2.png"></p>
+				<p>&nbsp;</p>
 				<hr>
 				<p>
 
