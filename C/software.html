@@ -30,6 +30,7 @@
                 <p><a href="#updates">Updates</a><br>
 				<a href="#sources">Change your Software Updates Country Location</a><br>
 				<a href="#ppa">Adding a PPA</a><br>
+				<a href="#other">Other Software - Install popular programs</a><br>
 				<a href="#deskenv">A word on changing Desktop Environments</a></p>
 				<p><b><font size="4"><a name="software"></a>Installing &amp; 
 				Removing software</font></b></p>
@@ -176,6 +177,97 @@
 				for you. Your new program is now installed and ready to use.</p>
 				<p>
 				<img border="0" src="img/software/ppa6.png"></p>
+				<p>
+				<a href="#top">Top of page</a></p><hr>
+				<p>&nbsp;</p>
+				<p><b><font size="4"><a name="other"></a>Other Software - Install 
+				popular programs</font></b></p>
+				<p><b>Skype - A popular voice, webcam and instant messaging 
+				client.</b></p>
+				<p>Open a terminal and type:</p>
+				<table border="0" width="800" id="table3" bgcolor="#FFFF55">
+					<tr>
+						<td><b>sudo add-apt-repository &quot;deb
+						<font color="#000000">http://archive.canonical.com/ 
+						$(lsb_release -sc) partner</font>&quot;<br>
+						<br>
+						sudo apt-get update &amp;&amp; sudo apt-get install skype -y</b></td>
+					</tr>
+				</table>
+				<p><br>
+				When the install has finished, <b>Skype</b> can be found in <b>
+				Menu, Internet</b>.</p>
+				<hr width="80%">
+				<p>&nbsp;</p>
+				<p><b>TeamViewer - A remote desktop application for Mac, Windows 
+				and Linux.</b></p>
+				<p>Open a terminal and type:</p>
+				<table border="0" width="800" id="table4" bgcolor="#FFFF55">
+					<tr>
+						<td><b>wget http://www.teamviewer.com/download/teamviewer_linux.deb<br>
+						<br>
+						sudo dpkg -i teamviewer_linux.deb<br>
+						<br>
+						rm -rf teamviewer_linux.deb</b></td>
+					</tr>
+				</table>
+				<p><br>
+				When the install has finished, <b>TeamViewer</b> can be found in
+				<b>Menu, Internet</b>.</p>
+				<hr width="80%">
+				<p>&nbsp;</p>
+				<p><b>Google Chrome - Popular web browser from Google.</b></p>
+				<p>Open a terminal and type:</p>
+				<table border="0" width="800" id="table5" bgcolor="#FFFF55">
+					<tr>
+						<td><b>wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb<br>
+						<br>
+						sudo dpkg -i google-chrome*<br>
+						<br>
+						rm -rf google-chrome*</b></td>
+					</tr>
+				</table>
+				<p><br>
+				When the install has finished, <b>Google Chrome</b> can be found 
+				in <b>Menu, Internet</b>.</p>
+				<hr width="80%">
+				<p>&nbsp;</p>
+				<p><b>Google Talk Plugin - Needed for voice and webcam support 
+				in Google Hangouts.</b></p>
+				<p>Open a terminal and type:</p>
+				<table border="0" width="800" id="table6" bgcolor="#FFFF55">
+					<tr>
+						<td><b>wget https://dl.google.com/linux/direct/google-talkplugin_current_i386.deb<br>
+						<br>
+						sudo dpkg -i google-talkplugin*<br>
+						<br>
+						rm -rf google-talkplugin*</b></td>
+					</tr>
+				</table>
+				<p><br>
+				When the install has finished, the <b>Google Talk Plugin </b>
+				will be integrated into your system.</p>
+				<hr width="80%">
+				<p>&nbsp;</p>
+				<p><b>Opera Web Browser - An highly configurable, alternative 
+				web browser.</b></p>
+				<p>Open a terminal and type:</p>
+				<table border="0" width="800" id="table7" bgcolor="#FFFF55">
+					<tr>
+						<td><b>sudo sh -c &#39;echo &quot;deb http://deb.opera.com/opera/ 
+						stable non-free&quot; &gt;&gt; /etc/apt/sources.list.d/opera.list&#39;<br>
+						<br>
+						sudo sh -c &#39;wget -O - http://deb.opera.com/archive.key | 
+						apt-key add -&#39;<br>
+						<br>
+						sudo apt-get update &amp;&amp; sudo apt-get install opera -y</b></td>
+					</tr>
+				</table>
+				<p><br>
+				When the install has finished, <b>Opera</b> can be found in <b>
+				Menu, Internet</b>.</p>
+				<hr width="80%">
+				<p>&nbsp;</p>
 				<p>
 				<a href="#top">Top of page</a></p>
 				<a/><hr>
