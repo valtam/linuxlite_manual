@@ -213,10 +213,12 @@ file), Then click on <b>Quit</b> to exit the settings window. Any adjustments sh
 				type:</p>
 				<table border="0" width="800" id="table1" bgcolor="#FFFF55">
 					<tr>
-						<td><b>sudo add-apt-repository ppa:bumblebee/stable<br>
-						sudo apt-get update <br>
-						sudo apt-get install bumblebee virtualgl 
-						linux-headers-generic-lts-quantal</b></td>
+						<td><b>sudo add-apt-repository ppa:ubuntu-x-swat/x-updates<br>
+						sudo add-apt-repository ppa:bumblebee/stable<br>
+						sudo apt-get update &amp;&amp; sudo apt-get upgrade<br>
+						sudo apt-get install nvidia-current nvidia-settings<br>
+						sudo apt-get install bumblee bumblebee-nvidia<br>
+						usermod -a -G bumblebee $USER</b></td>
 					</tr>
 				</table>
 				<p><br>
