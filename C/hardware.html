@@ -28,7 +28,7 @@
             
            	<div class="main_body">
                 <p><a href="#graphics">Graphic Drivers And Setup</a><br>
-<!--&nbsp;- <a href="#intel">Intel</a><br>-->
+&nbsp;- <a href="#intel">Intel</a><br>
 &nbsp;- <a href="#ati">ATI</a><br>
 &nbsp;- <a href="#nvidia">NVIDIA</a><br>
 &nbsp;- <a href="#optimus">NVIDIA-Optimus</a><br>
@@ -38,52 +38,43 @@
 				<a href="#booting">Booting issues</a><br><a href="#report">Create System Report tool</a><br>
 				<a href="#seekhelp">Finding help online</a></p>
 
-            	<!--<p><b><font size="5">Drivers</font></b></p>
+            	<p><b><font size="5">Drivers</font></b></p>
 				<p><b><font size="4">Wireless</font></b></p>
 				<p>To be written.</p><hr>
-				<p>&nbsp;</p>-->
+				<p>&nbsp;</p>
                 <p><b><font size="4"><a name="graphics"></a></font>
 				<font size="5">Graphics Drivers and Setup</font></b></p>
-				<!--<p><b><font size="4"><a name="intel"></a>Graphics - Intel</font></b></p>
-				<p>The first step is to acquire the Intel Linux Graphics 
-				Installer from <a href="https://01.org/linuxgraphics/downloads">
-				Intel's Open Source Site</a>. Ensure that you download the 
-				proper driver: <b>Installer for Ubuntu 12.04 - 32 bits.</b></p>
+				<p><b><font size="4"><a name="intel"></a>Graphics - Intel</font></b></p>
+				<p>The following is an independently maintained PPA by Stefan 
+				Glasenhardt. As such you should research first and then decide if you 
+				want to use this PPA. The standard installed Ubuntu Intel drivers work 
+				fine, by using this PPA, you may gain a little more performance and 
+				better framerates.<br />
+				<br />
+				A word from Stefan:</p>
+				<p><em><strong>This only supports Intel i810 chipset and up. 
+				Others such as GMA 500 … are not supported. And also remember 
+				that, these are ‘hot’ updates and might contain bugs, so please 
+				use it at your own risk.</strong></em></p>
+				<p>More information here:
+				<a href="https://launchpad.net/~glasen/+archive/intel-driver" target="_blank">
+				https://launchpad.net/~glasen/+archive/intel-driver</a> </p>
+				<p>To install these drivers, open up a terminal and type:&nbsp;</p>
+				<table border="0" width="800" id="table2" bgcolor="#FFFF55">
+					<tr>
+						<td><strong>sudo apt-add-repository 
+						ppa:glasen/intel-driver<br />
+						sudo apt-get update<br />
+						sudo apt-get install xserver-xorg-video-intel&nbsp;</strong></td>
+					</tr>
+				</table>
 				<p>
-				<img alt="" height="421" src="img/hardware/intel/firefoxinteldriverpage.png" width="755" /></p>
-				<p>The next step is to locate the file in your <b>Downloads</b> folder.</p>
+				</p>
 				<p>
-				<img alt="" height="497" src="img/hardware/intel/inteldrivericon.png" width="845" /></p>
-				<p>Double-click the file. This will open the Gdebi Package 
-				Installer. Type in your root password when prompted and the 
-				package will install. You can then locate the program in 
-				<b>Menu, Settings, Intel Graphics Driver</b>.</p>
+				Then restart your computer.</p>
 				<p>
-				<img alt="" height="426" src="img/hardware/intel/gdebiinstaller.png" width="552" /></p>
-				<p>Upon opening the graphics driver installer, you will be 
-				greeted with the following install wizard. Select <b>Next</b> to 
-				continue.</p>
-				<p>
-				<img alt="" height="333" src="img/hardware/intel/inteldriver-1.png" width="769" /></p>
-				<p>The installer will automatically check your system for the 
-				required packages and repositories.</p>
-				<p>
-				<img alt="" height="333" src="img/hardware/intel/inteldriver-2.png" width="769" /></p>
-				<p>After verifying that all things are in order, the installer 
-				will then go on to update the repositories and install the 
-				packages for your Intel graphics driver.</p>
-				<p>
-				<img alt="" height="333" src="img/hardware/intel/inteldriver-2.5.png" width="784" /></p>
-				<p>After the wizard has completed the install of the drivers, 
-				you are then prompted to restart your computer. Click <b>Yes</b> 
-				to restart your computer and enjoy your new up-to-date drivers. 
-				In the future, driver updates will be automatically installed 
-				via <b>Install Updates</b>.</p>
-				<p>
-				<img alt="" height="152" src="img/hardware/intel/inteldriver-3.png" width="642" /></p>
-				<p>
-<a href="#top">Top of page</a></p><hr>
-				<p>&nbsp;</p>-->
+				<a href="#top">Top of page</a></p><hr>
+				<p>&nbsp;</p>
 				<p><b><font size="4"><a name="ati"></a>Graphics - ATI</font></b></p>
 				<p>If you&#39;re not sure whether or not you have ATI graphics, open 
 				up a terminal and run this command:</p>
