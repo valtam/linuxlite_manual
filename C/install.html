@@ -72,7 +72,7 @@
 				Open a folder and make sure you are in the directory that the 
 				iso file is in. Open a terminal in that directory and type the following:<table border="0" width="800" id="table1" bgcolor="#FFFF55">
 					<tr>
-						<td><b>sudo dd if=linux-lite-1.0.6-beta-32bit.iso of=/dev/sdx 
+						<td><b>sudo dd if=linux-lite-1.0.6-32bit.iso of=/dev/sdx 
 				bs=4M</b></td>
 					</tr>
 				</table>
@@ -151,7 +151,10 @@
 				<b>Delete</b> from the button options to delete the partition. If you wish to return everything back to its original state you may use the 
 				<b>Revert</b> button. <strong>NOTE</strong><b>: This will only 
 				work if you have not written changes to the disk.</b><p>Under the partitioner there is a menu for selecting the location of the boot loader's installation. You may select a drive's MBR, indicated by the device name e.g. /dev/sda, or you may select a partition to install the boot loader to. The safest option is to install the bootloader to the MBR of the first disk as the bootloader will intelligently add 
-				entries for installations of Windows and other Linux installs.<p><img src="img/installer/3a-manualinstall.png" alt="" />                                                
+				entries for installations of Windows and other Linux installs.<p>
+				<strong>NOTE: If you have any NTFS drives, it is important to 
+				give these a mount point during the install. That way they will 
+				be easily accessible after the installation.</strong><p><img src="img/installer/3a-manualinstall.png" alt="" />                                                
               <p>After completing the partitioning phase of the installation, you are prompted to set up some personal details about the system. The installer will continue to work in the background while you are filling out this information. The first step is to select your time zone. The installer may detect your time zone based on your location via your ISP's information. If not, you may select your time zone by either clicking on your region on the supplied map or by typing in your area in the box below.
               <p><img src="img/installer/4-timezone.png" alt="" />                                          
               <p>The next step is to select your keyboard language and layout. You may select the language that your keyboard corresponds to on the left and any specialized layout on the right. This is the point where you may select to enable international keys on your keyboard. Though, these options may be changed later.<p><img src="img/installer/5-keyboardlayout.png" alt="" />                                          
