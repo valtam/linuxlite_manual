@@ -29,7 +29,8 @@
            	<div class="main_body">
                 <p>
 				<a href="#updates">Installing Linux Lite to your computer</a><br>
-				<a href="#adduser">Adding another User in the future</a><br>
+				<a href="#adduser">Adding another User in the future</a><br />
+				<a href="#userperms">User permissions</a><br>
 				<a href="#userdel">Removing a User</a><br>
 				<a href="#password">Resetting your password</a><br>
 				<a href="#terminal">Terminal Basics</a><br>
@@ -212,6 +213,22 @@
 				</table>
 				<p>
 				<br>
+				<p>
+				<font size="4"><a name="userperms"></a><b>User Permissions</b></font><p>
+				After you have added another user, by default that user will be 
+				on a limited account. They are still able to use programs, they 
+				just won't have any administrator rights. To give another user 
+				admin rights, open up a <b>Terminal</b> and type in the 
+				following:<table border="0" width="800" id="table6" bgcolor="#FFFF55">
+					<tr>
+						<td><b>sudo adduser name sudo</b></td>
+					</tr>
+				</table>
+				<p>
+				<br />
+				enter your sudo password and where <strong>name</strong> is the 
+				name of the user you want to remove.<br />
+				<p>
 				<font size="4"><a name="userdel"></a><b>Removing a User</b></font><p>
 				To remove a user, open up a <b>Terminal</b> and type in the 
 				following:<table border="0" width="800" id="table4" bgcolor="#FFFF55">
