@@ -30,7 +30,8 @@
                 <p><b><font size="4">Network Connections:<br>
 				<br>
 				</font></b><a href="#wireless">Wireless Connections</a><br>
-				<a href="#usbmodem">USB Broadband Modem</a><br>
+				<a href="#usbmodem">USB Broadband Modem</a><br />
+				<a href="#nas">Accessing a NAS device</a><br>
 				<a href="#shares">Network Shares</a><br>
 				<a href="#wintolin">Accessing you Linux Lite Shares from Windows</a><br>
 				<a href="#lintowin">Accessing you Windows Shares from Linux Lite</a><br>
@@ -109,7 +110,63 @@
 				<p>
 				<a href="#top">Top of page</a></p><hr>
 				<p>&nbsp;</p>
-				<p><b><font size="4"><a name="usbmodem"></a>USB Broadband Modem</font></b></p>
+				<p><b><font size="4"><a name="nas"></a>Accessing a NAS device</font></b></p>
+				<p>Many homes now use a NAS or Network Attached Storage device.<br />
+				In this tutorial we'll show you how to access all your media 
+				files, then show you how to play them across your network with 
+				VLC.<br />
+				When this set up is complete, you'll also be able to copy and 
+				paste files between your NAS and your pc just like you did in 
+				Windows or Mac.</p>
+				<p>First thing you need to do is find the IP address of your 
+				NAS. You may know this already or your NAS manual will show you 
+				how to find this. Once you have your NAS's IP address, open up 
+				your home folder and type in the following:</p>
+				<p><strong>smb://192.168.0.5</strong> where 192.168.0.5 is your 
+				NAS's IP address.</p>
+				<p>
+				<img height="460" src="img/network/nas/nas1.png" width="711" /></p>
+				<p>Put in the username of the NAS, in most cases it is <strong>
+				admin</strong>, but again refer to your manual for the correct 
+				information.<br />
+				Put in the workgroup (<strong>Domain</strong>) name, and finally 
+				the password for your NAS. Place a dot in <strong>Remember 
+				forever</strong> if you want it to save your details.</p>
+				<p>
+				<img height="458" src="img/network/nas/nas2.png" width="709" /></p>
+				<p>You should now see all of your NAS folders.</p>
+				<p>
+				<img height="460" src="img/network/nas/nas3.png" width="711" /></p>
+				<p>Lets look inside the <strong>Movies</strong> folder for this device, as you 
+				can see I have a movie file in there called <strong>The Code 
+				Linux Historical Documentary.mp4</strong></p>
+				<p>
+				<img height="460" src="img/network/nas/nas4.png" width="711" /></p>
+				<p>Before we can start playing media files across the network, 
+				we need to set up VLC so that it can access and play files 
+				remotely.<br />
+				In Linux Lite, click on <strong>Menu, Multimedia, VLC Media 
+				Player</strong>. With VLC open, click on <strong>Tools, 
+				Preferences</strong>.</p>
+				<p>
+				<img height="356" src="img/network/nas/nas5.png" width="443" /></p>
+				<p>In window that pops up, in the bottom left click on <strong>
+				All</strong>. Then on the left, expand <strong>Input / Codecs, 
+				Access modules, SMB</strong>. Then put in your NAS's username, 
+				password and finally the <strong>SMB domain</strong> 
+				(Workgroup). Click on <strong>Save</strong> to finish and close 
+				VLC.</p>
+				<p>
+				<img height="545" src="img/network/nas/nas6.png" width="684" /></p>
+				<p>Now we've given VLC the network credentials it needs to 
+				access your NAS, we can browse and play our files.</p>
+				<p>
+				<img height="458" src="img/network/nas/nas7.png" width="784" /></p>
+				<p>
+				<a href="#top">Top of page</a></p>
+				<hr>
+				<p>&nbsp;</p>
+				<p><b><font size="4">USB Broadband Modem</font></b></p>
 				<p>If you have the <b>Huawei E220</b> then this should work out of the 
 				box. This is a very common modem and we encourage you to use 
 				this model if it is possible.<br>
