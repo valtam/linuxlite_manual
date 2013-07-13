@@ -4,6 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 <title>Linux Lite | Install Guide</title>
+<style type="text/css">
+.auto-style1 {
+	font-size: medium;
+}
+</style>
 </head>
 
 <body>
@@ -28,7 +33,8 @@
             
            	<div class="main_body">
                 <p>
-				<a href="#updates">Installing Linux Lite to your computer</a><br>
+				<a href="#updates">Installing Linux Lite to your computer</a><br />
+				<a href="#mounting">Mounting drives &amp; partitions</a><br>
 				<a href="#adduser">Adding another User in the future</a><br />
 				<a href="#userperms">User permissions</a><br>
 				<a href="#userdel">Removing a User</a><br>
@@ -193,7 +199,120 @@
 				<p>
 				&nbsp;
 				<p>
-				<font size="4"><a name="adduser"></a><b>Adding another User</b></font><p>
+				<font size="4"><a name="mounting"></a><b>Mounting drives &amp; 
+				partitions</b></font><p>
+				<a href="#ext4">EXT4</a><br />
+				<a href="#ext3">EXT3</a><p>
+				During the installation process, you may forget to or not know how 
+				to mount any other drives or partitions that you have.<br />
+				<p>
+				<strong>NTFS</strong><p>
+				First we need to make a mount point in your home folder. This is 
+				where you will access those files.<br />
+				In your home folder, right click and make a new folder, in this 
+				example we'll call it '<strong>ntfsfiles</strong>'. Now onto the 
+				next step.<br />
+				<br />
+				Open a terminal and type: <strong>sudo blkid</strong><br />
+				<br />
+				followed by your password. This will output the uuid's for all 
+				your hard drives.<br />
+				<br />
+				Take the uuid for that drive and place it into /etc/fstab, first 
+				we will back up the fstab file:<br />
+				<br />
+				<strong>sudo cp /etc/fstab /etc/fstab.bak</strong><br />
+				<br />
+				In the terminal still, type in: <strong>sudo leafpad /etc/fstab</strong><br />
+				<br />
+				A text file will open up. Lets say the uuid for our new ntfs 
+				drive is - <strong>0463741f-a838-40c8-b40f-3dbb7f988e29</strong>. 
+				We would enter this into our fstab as:<br />
+				<br />
+				<strong>UUID=0463741f-a838-40c8-b40f-3dbb7f988e29 
+				/home/user/ntfsfiles ntfs defaults,umask=007,uid=1000,gid=1000 0 
+				0</strong><br />
+				<br />
+				You can put the above line anywhere in the fstab file.<br />
+				Make sure you leave a blank line at the bottom of the fstab file 
+				before you save the file.<p>
+				<img height="408" src="img/installer/fstab_ntfs.png" width="823" /><p>
+				Where <strong>user</strong> is your username. Save the file. Open a terminal and type: <strong>sudo mount -a</strong><br />
+				<br />
+				If all went to plan, in <strong>/home/user/ntfsfiles</strong> 
+				you should see all your files.<p>
+				<strong><a name="ext4"></a><span class="auto-style1">EXT4</span></strong><p>
+				First we need to make a mount point in your home folder. This is 
+				where you will access those files.<br />
+				In your home folder, right click and make a new folder, in this 
+				example we'll call it '<strong>ext4files</strong>'. Now onto the 
+				next step.<br />
+				<br />
+				Open a terminal and type: <strong>sudo blkid</strong><br />
+				<br />
+				followed by your password. This will output the uuid's for all 
+				your hard drives.<br />
+				<br />
+				Take the uuid for that drive and place it into /etc/fstab, first 
+				we will back up the fstab file:<br />
+				<br />
+				<strong>sudo cp /etc/fstab /etc/fstab.bak</strong><br />
+				<br />
+				In the terminal still, type in: <strong>sudo leafpad /etc/fstab</strong><br />
+				<br />
+				A text file will open up. Lets say the uuid for our new ext4 
+				drive is - <strong>0463741f-a838-40c8-b40f-3dbb7f988e29</strong>. 
+				We would enter this into our fstab as:<br />
+				<br />
+				<strong>UUID=0463741f-a838-40c8-b40f-3dbb7f988e29 
+				/home/user/ext4files ext4 defaults 0 2</strong><p>
+				You can put the above line anywhere in the fstab file.<br />
+				Make sure you leave a blank line at the bottom of the fstab file 
+				before you save the file.<p>
+				<img height="408" src="img/installer/fstab_ext4.png" width="823" /><br />
+				<br />
+				Where <strong>user</strong> is your username. Save the file. Open a terminal and type: <strong>sudo mount -a</strong><br />
+				<br />
+				If all went to plan, in <strong>/home/user/ext4files</strong> 
+				you should see all your files.<p>
+				<strong><a name="ext3"></a><span class="auto-style1">EXT3</span></strong><p>
+				First we need to make a mount point in your home folder. This is 
+				where you will access those files.<br />
+				In your home folder, right click and make a new folder, in this 
+				example we'll call it '<strong>ext3files</strong>'. Now onto the 
+				next step.<br />
+				<br />
+				Open a terminal and type: <strong>sudo blkid</strong><br />
+				<br />
+				followed by your password. This will output the uuid's for all 
+				your hard drives.<br />
+				<br />
+				Take the uuid for that drive and place it into /etc/fstab, first 
+				we will back up the fstab file:<br />
+				<br />
+				<strong>sudo cp /etc/fstab /etc/fstab.bak</strong><br />
+				<br />
+				In the terminal still, type in: <strong>sudo leafpad /etc/fstab</strong><br />
+				<br />
+				A text file will open up. Lets say the uuid for our new ext3 
+				drive is - <strong>0463741f-a838-40c8-b40f-3dbb7f988e29</strong>. 
+				We would enter this into our fstab as:<br />
+				<br />
+				<strong>UUID=0463741f-a838-40c8-b40f-3dbb7f988e29 
+				/home/user/ext3files ext3 defaults,errors=remount-ro 0 1</strong><p>
+				You can put the above line anywhere in the fstab file.<br />
+				Make sure you leave a blank line at the bottom of the fstab file 
+				before you save the file.<p>
+				<img height="408" src="img/installer/fstab_ext3.png" width="823" /><br />
+				<br />
+				Where <strong>user</strong> is your username. Save the file. Open a terminal and type: <strong>sudo mount -a</strong><br />
+				<br />
+				If all went to plan, in <strong>/home/user/ext3files</strong> 
+				you should see all your files.<p>
+				<a href="#top">Top of page</a><hr>
+				<p>
+				&nbsp;<p>
+				<font size="4"><b>Adding another User</b></font><p>
 				To add another user, open up a <b>Terminal</b> and type in the 
 				following:<table border="0" width="800" id="table2" bgcolor="#FFFF55">
 					<tr>
