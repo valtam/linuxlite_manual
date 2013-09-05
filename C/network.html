@@ -460,27 +460,24 @@
 				<p>&nbsp;</p>
 				<p><font size="4"><a name="date"></a><b>Setting the Time and 
 				Date</b></font></p>
-				<p>The date and time format can be broken down into the 
-				following format:</p>
-				<p><strong>MMDDhhmmYYYY.ss</strong></p>
-				<p><strong>MM</strong> - Month in 2 digits eg. 10 for October<br />
-				<strong>DD</strong> - Day in 2 digits eg. 04 for the 4th<br />
-				<strong>hh</strong> - The hour eg. 14 for 2pm (24 hour clock)<br />
-				<strong>mm</strong> - The minutes eg. 54 or 54 minutes past the 
-				hour<br />
-				<strong>YYYY</strong> - The year eg. 2013<br />
-				<strong>.ss</strong> - The seconds eg .00</p>
-				<p>In the following example we will set the time and date on 
-				LInux Lite for 4th October 2013 2.54pm, open up a terminal and 
+				<p>&nbsp;Open up a terminal and 
 				type:</p>
 				<table border="0" width="800" id="table11" bgcolor="#FFFF55">
 					<tr>
-						<td>sudo date 100414542013.00</td>
+						<td>sudo hwclock --hctosys</td>
 					</tr>
 				</table>
 				<br />
-				<p>followed by your password and where 100414542013.00 is the correct date and time where you 
-				are.</p>
+				<p>followed by your password. This will get the time from your 
+				bios and set it. You can also use:</p>
+				<table border="0" width="800" id="table12" bgcolor="#FFFF55">
+					<tr>
+						<td>sudo ntpdate ntp.ubuntu.com</td>
+					</tr>
+				</table>
+				<p>&nbsp;</p>
+				<p>which will sync your clock with an online server (requires an 
+				internet connection).</p>
 				<p>In the future we will be offering a simple Time and Date 
 				application that will also allow you to change your timezone.</p>
 				<p><a href="#top">Top of page</a></p>
