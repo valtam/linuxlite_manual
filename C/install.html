@@ -11,6 +11,10 @@
 .auto-style2 {
 	background-color: #FFFF55;
 }
+.auto-style3 {
+	border-style: solid;
+	border-width: 1px;
+}
 </style>
 </head>
 
@@ -83,12 +87,12 @@
 				Open a folder and make sure you are in the directory that the 
 				iso file is in. Open a terminal in that directory and type the following:<table border="0" width="800" id="table1" bgcolor="#FFFF55">
 					<tr>
-						<td><b>sudo dd if=linux-lite-1.0.6-32bit.iso of=/dev/sdx 
+						<td><b>sudo dd if=linux-lite-1.0.8-32bit.iso of=/dev/sdx 
 				bs=4M<br />
 						<br />
 						for 64bit:<br />
 						<br />
-						sudo dd if=linux-lite-1.0.6-64bit.iso of=/dev/sdx 
+						sudo dd if=linux-lite-1.0.8-64bit.iso of=/dev/sdx 
 				bs=4M</b></td>
 					</tr>
 				</table>
@@ -100,8 +104,7 @@
 				<font size="4"><b>No USB Boot option in the Bios? Use PloP</b></font><br />
 				<br />
 				Full instructions are here -
-				<a href="http://www.howtogeek.com/howto/16822/boot-from-a-usb-drive-even-if-your-bios-wont-let-you/">
-				http://www.howtogeek.com/howto/16822/boot-from-a-usb-drive-even-if-your-bios-wont-let-you/</a> <p>
+				<a href="http://www.howtogeek.com/howto/16822/boot-from-a-usb-drive-even-if-your-bios-wont-let-you/" target="_blank">http://www.howtogeek.com/howto/16822/boot-from-a-usb-drive-even-if-your-bios-wont-let-you/</a> <p>
 				<a href="#top">Top of page</a><hr>
 				<p>
 				&nbsp;<p>
@@ -201,7 +204,7 @@
 				&#39;Take a photo&#39; this feature is supported so that when 
 			  you first log in, your photo will be displayed as your avatar. If 
 			  you skip this step, you can use a .png photo of yourself, rename 
-			  it to <strong>.face</strong> and place it in your /home/user 
+			  it to <strong>.face</strong> and place it in your <strong>/home/user</strong> 
 			  folder.<br>
 				After finishing all of these steps you will be greeted with a slideshow detailing all of the features and software that are included in this version of Linux Lite. You may allow them to play on their own or navigate through them using the arrow buttons on the sides of the window.<p>
 				<img alt="slide" height="537" src="img/installer/7-slideshow.png" width="754" />                                          
@@ -223,33 +226,33 @@
 				You will get one of two boxes pop up like the ones below, follow 
 				the instructions by clicking on either <strong>Update</strong> 
 				or <strong>Install</strong>.<p>
-				<img src="img/installer/lang/lang2.png" /><p>
+				<img src="img/installer/lang/lang2.png" class="auto-style3" /><p>
 				<img src="img/installer/lang/lang3.png" /><p>
 				&nbsp;You will then be prompted for your password, enter it to 
 				continue.<p>
-				<img src="img/installer/lang/lang4.png" /><p>
+				<img src="img/installer/lang/lang4.png" class="auto-style3" /><p>
 				Now click on the button <strong>Install / Remove Languages</strong>.<p>
-				<img src="img/installer/lang/lang5.png" /><p>
+				<img src="img/installer/lang/lang5.png" class="auto-style3" /><p>
 				In this example, we'll install the <strong>Portuguese</strong> 
 				language. Scroll down, find your language and tick the box next 
 				to it, then click on <strong>Apply Changes</strong>.<p>
-				<img src="img/installer/lang/lang6.png" /><p>
+				<img src="img/installer/lang/lang6.png" class="auto-style3" /><p>
 				Your computer will begin to download all the language files, 
 				this may take a while.<p>
-				<img src="img/installer/lang/lang7.png" /><p>
+				<img src="img/installer/lang/lang7.png" class="auto-style3" /><p>
 				Once that is done, scroll to the bottom of the <strong>Language 
 				for menus and windows</strong> box and drag your newly installed 
 				language to the top of the list. Then click on <strong>Apply 
 				System-Wide</strong>, you'll be prompted for your password 
 				again.<p>
-				<img src="img/installer/lang/lang8.png" /><p>
+				<img src="img/installer/lang/lang8.png" class="auto-style3" /><p>
 				Now click on the <strong>Regional Formats</strong> tab, select 
 				the language you just installed, and click on <strong>Apply 
 				System-Wide</strong>.<p>
-				<img src="img/installer/lang/lang9.png" /><p>
+				<img src="img/installer/lang/lang9.png" class="auto-style3" /><p>
 				Now logout and login again and you will see that your new 
 				language has been applied.<p>
-				<img src="img/installer/lang/lang10.png" /><p>
+				<img src="img/installer/lang/lang10.png" class="auto-style3" /><p>
 				Please note that not all programs may not have your language 
 				applied. If this is the case, search for that program in <strong>
 				Install/Remove Software</strong> and see if there is a language 
@@ -376,86 +379,53 @@
 				<p>
 				&nbsp;<p>
 				<font size="4"><b><a name="adduser"></a>Adding another User</b></font><p>
-				To add another user, open up a <b>Terminal</b> and type in the 
-				following:<table border="0" width="800" id="table2" bgcolor="#FFFF55">
-					<tr>
-						<td><b>sudo adduser name</b></td>
-					</tr>
-				</table>
-				<p>
-				<br>
-				where<b> name</b> is the name of your new user. The only details 
-				you will need to enter is:<p>
-				your password<br>
-				<b>Enter new UNIX password:<br>
-				Retype new UNIX password:</b><p>
+				To add another User to Linux Lite, click on <strong>Menu, 
+				Settings, User Manager</strong>.<br />
+				The click on <strong>New user</strong> and enter a name, and the 
+				same password twice.<p>
 				<b>NOTE: Choose a strong password, a mix of upper and lower case 
 				as well as a mix of numbers and characters. An example of this 
 				would be: <span class="auto-style2">y%9L2x#o</span> would be 
 				considered a strong password. Use a program like
 				<a href="https://www.keepassx.org/" target="_blank">Keepassx</a> 
 				to keep all your passwords safely stored and NEVER use the same 
-				password for different websites.<br />
+				password for different websites and accounts.<br />
 				<br />
 				Never compromise your security for convenience.</b><p>
-				All the other details are voluntary and not necessary.<p>
-				<b>Is the information correct? [Y/n]</b> (press enter if they are 
-				correct)<p>
-				<img border="0" src="img/installer/adduser.png"><table border="0" width="800" id="table3" bgcolor="#FFFF55">
-					<tr>
-						<td><b>NOTE: If you have already enabled auto login 
-						for another user, you will need to disable it so that 
-						your new user can login. If you don&#39;t want to disable 
-						auto login for yourself, you can click on &#39;Menu, Lock 
-						Screen&#39; choose &#39;New Login&#39; from the locked screen and 
-						the newly created user can then login. Only one user can 
-						have auto login enabled at a time.</b></td>
-					</tr>
-				</table>
-				<p>
-				<br>
+				<img src="img/installer/liteuser1.png" class="auto-style3" /><p>
+				You will then be asked for your password, enter it and click on
+				<strong>Ok</strong> to finish creating the new user account. The 
+				new user will have the same rights as the default user (you)
+				<strong>except for Administrator rights</strong> meaning they 
+				will be unable to modify system settings such as installing 
+				software and changing system files.<p>
+				<img src="img/installer/liteuser2.png" class="auto-style3" /><br>
 				<p>
 				<font size="4"><a name="userperms"></a><b>User Permissions</b></font><p>
-				After you have added another user, by default that user will be 
-				on a limited account. They are still able to use programs, they 
-				just won't have any administrator rights. To give another user 
-				admin rights, open up a <b>Terminal</b> and type in the 
-				following:<table border="0" width="800" id="table6" bgcolor="#FFFF55">
-					<tr>
-						<td><b>sudo adduser name sudo</b></td>
-					</tr>
-				</table>
-				<p>
-				<br />
-				enter your sudo password and where <strong>name</strong> is the 
-				name of the user you want to give admin rights to.<br />
+				If you want your new user to have Administrator rights, in the 
+				right hand pane scroll down to <strong>sudo</strong>, place a 
+				tick in the box beside it and click on <strong>Apply</strong>. 
+				You can give the new user other group permissions to by using 
+				this method, but out of the box this should not be necessary as 
+				by default, the application already does all this for you. Now 
+				when the new user next logs in, they will have the same full 
+				system rights as you. You will both be 'Administrators'.<p>
+				<img src="img/installer/liteuser3.png" class="auto-style3" /><br />
 				<p>
 				<font size="4"><a name="userdel"></a><b>Removing a User</b></font><p>
-				To remove a user, open up a <b>Terminal</b> and type in the 
-				following:<table border="0" width="800" id="table4" bgcolor="#FFFF55">
-					<tr>
-						<td><b>sudo userdel name</b></td>
-					</tr>
-				</table>
-				<p>
-				<br>
-				enter your sudo password and where<b> name</b> is the name of 
-				the user you want to remove.<br>
-				If you want to remove their home directory as well (make sure you 
-				backup any files you want to save first)<table border="0" width="800" id="table5" bgcolor="#FFFF55">
-					<tr>
-						<td><b>sudo userdel -r name<br>
-						<br>
-						if you get a message saying they are still logged in, 
-						try:<br>
-						<br>
-						sudo userdel -r -f name</b></td>
-					</tr>
-				</table>
-				<p>
-				<br>
-				enter your sudo password and replace<b> name</b> with the name of 
-				the user you want to remove.<p>
+				<strong>NB: Before removing a user account make sure their files 
+				are backed up to a usb device or the cloud first. Removing an 
+				account also removes all that persons documents, pictures, 
+				videos, files etc.</strong><p>
+				This is as easy as selecting the user that you want to remove 
+				from the <strong>Select user</strong> drop down box, clicking on
+				<strong>Remove this user</strong> and clicking on <strong>Apply</strong>. 
+				If you are asked for <strong>your</strong> password, please 
+				enter it and then click <strong>Ok</strong>. Next a confirmation 
+				box will appear, read the message and if you want to proceed 
+				click on <strong>Yes</strong>. The user account and all their 
+				data has now been removed.<p>
+				<img src="img/installer/liteuser4.png" class="auto-style3" /><p>
 				<a href="#top">Top of page</a><hr><p>
 				&nbsp;<p>
 				<font size="4"><a name="password"></a><b>Resetting your 
