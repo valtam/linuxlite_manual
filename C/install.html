@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
@@ -34,7 +34,7 @@
           <h1>Linux Lite Installation Guide</h1>
         </div>
         <div class="main_body">
-          <p> <a href="#updates">Installing Linux Lite to your computer</a><br />
+          <p> <a href="#install">Installing Linux Lite to your computer</a><br />
             <a href="#language">Setting your Language</a><br />
             <a href="#mounting">Mounting drives &amp; partitions</a><br />
             <a href="#adduser">Adding another User</a><br />
@@ -43,7 +43,8 @@
             <a href="#password">Resetting your password</a><br />
             <a href="#terminal">Terminal Basics</a><br />
             <a href="#themes">Themes &amp; Icon sets</a></p>
-          <p> <b> <font size="4">Writing the Linux Lite ISO to a DVD</font></b></p>
+          <p> <b> <font size="4">Writing the latest Linux Lite ISO to a CD on 
+		  Windows</font></b></p>
           <p> Here is some free DVD burning software for you to select from:</p>
           <p> BurnAware Free - <a href="http://www.burnaware.com" target="_blank">
               http://www.burnaware.com</a></p>
@@ -51,32 +52,34 @@
               http://cdburnerxp.se/</a></p>
           <p>ImgBurn - <a href="http://www.imgburn.com/" target="_blank">
               http://www.imgburn.com/</a></p>
-          <p>Place a blank DVD in your DVD drive, open up the program, select
-            the iso file that you want to burn. Choose the lowest burn speed,
-            this will greatly reduce the risk of your burn becoming corrupt as
-            can sometimes happen. A 4x speed is recommended if you have it.</p>
+          <p>Place a blank DVD in your DVD drive, open up the program, select 
+		  the iso file that you want to burn. Choose the lowest burn speed, this 
+		  will greatly reduce the risk of your burn becoming corrupt as can 
+		  sometimes happen. A 4x speed is recommended if you have it.</p>
           <p> <br />
-            <b> <font size="4">Writing the Linux Lite ISO to USB using software</font></b></p>
-          <p> <span style="font-weight: bold;">Unetbootin:</span><br />
-            UNetbootin allows you to create bootable Live USB drives. Unetbootin
-            is available for Windows, Mac and Linux. Download and follow
-            instructions from here - <a href="http://unetbootin.sourceforge.net/"
-              target="_blank"> http://unetbootin.sourceforge.net/</a></p>
+            <b> <font size="4">Writing the latest Linux Lite ISO to USB on 
+		  Windows</font></b></p>
+          <p> <strong>Win32DiskImager</strong><span style="font-weight: bold;">:</span><br />
+            Win32DiskImager<strong> </strong>allows you to create a bootable 
+		  Live USB drive. Download it from here -
+		  <a href="http://sourceforge.net/projects/win32diskimager/files/Archive/win32diskimager-v0.9-binary.zip/download" target="_blank">
+		  Win32DiskImager</a>.<br />
+		  We do not recommend the use of Unetbootin on any operating system.</p>
           <p> <font size="4"><br />
-              <b>Writing the Linux Lite ISO to USB using a terminal in Linux</b></font></p>
-          <p> To find out the letter of your USB stick, open a terminal and
-            type: <span style="font-weight: bold;">df -h</span> It is usually
-            listed as '<b>media</b>' or similar.<br />
-            Be very careful to make sure you choose the right drive letter, as
-            you can see in the <b>Filesystem</b> column, my device is<b> sdb</b>
-            another clue is the value in the <b>Size </b>column, here it is
-            shown as <b>15G</b>. In this example my device is an Apacer <b>
+              <b>Writing the latest Linux Lite ISO to USB using a terminal in 
+		  Linux and OSX</b></font></p>
+          <p> To find out the letter of your USB stick, open a terminal and 
+		  type: <span style="font-weight: bold;">df -h</span> It is usually 
+		  listed as '<b>media</b>' or similar.<br />
+            Be very careful to make sure you choose the right drive letter, as 
+		  you can see in the <b>Filesystem</b> column, my device is<b> sdb</b>
+            another clue is the value in the <b>Size </b>column, here it is 
+		  shown as <b>15G</b>. In this example my device is an Apacer <b>
               15gb</b> USB stick.</p>
           <p> <img border="0" src="img/installer/df-h.png" /></p>
           <p> <br />
-            Open a folder and make sure you are in the directory that the iso
-            file is in. Open a terminal in that directory and type the
-            following:</p>
+            Open a folder and make sure you are in the directory that the iso 
+		  file is in. Open a terminal in that directory and type the following:</p>
           <table width="800" border="0" bgcolor="#FFFF55" id="table1">
             <tbody>
               <tr>
@@ -88,473 +91,470 @@
               </tr>
             </tbody>
           </table>
-          <p>  </p>
+          <p> &nbsp;</p>
           <p> where '<b>x</b>' is the letter of your USB device.</p>
-          <p> The Live DVD/USB image will boot into the desktop automatically,
-            there is no need to login manually.</p>
+          <p> The Live DVD/USB image will boot into the desktop automatically, 
+		  there is no need to login manually.</p>
           <p> <font size="4"><b>No USB Boot option in the Bios? Use PloP</b></font><br />
             <br />
-            Full instructions are here - <a target="_blank" href="http://www.howtogeek.com/howto/16822/boot-from-a-usb-drive-even-if-your-bios-wont-let-you/">http://www.howtogeek.com/howto/16822/boot-from-a-usb-drive-even-if-your-bios-wont-let-you/</a>
+            Full instructions are here - <a target="_blank" href="http://www.howtogeek.com/howto/16822/boot-from-a-usb-drive-even-if-your-bios-wont-let-you/">
+		  http://www.howtogeek.com/howto/16822/boot-from-a-usb-drive-even-if-your-bios-wont-let-you/</a>
           </p>
           <p> <a href="#top">Top of page</a></p>
           <hr />
-          <p>  </p>
-          <p> <font size="4"><a name="updates"></a><b>Installing Linux Lite to
-                your computer<br />
+          <p> &nbsp;</p>
+          <p> <font size="4"><a name="install"></a><b>Installing Linux Lite to 
+		  your computer<br />
               </b></font><br />
-            Start your computer, and go into your system Bios and check that the
-            boot order is set so that DVD and USB devices are set to boot first.
-            This varies from bios to bios. Refer to your motherboard
-            documentation for more information.<br />
-            Once you are happy with your bios set up, insert the DVD disc or USB
-            stick into your computer and reboot your computer. You'll be greeted
-            with the following screen. Let the timer run down if you want to
-            boot to the Live session.</p>
+            Start your computer, and go into your system Bios and check that the 
+		  boot order is set so that DVD and USB devices are set to boot first. 
+		  This varies from bios to bios. Refer to your motherboard documentation 
+		  for more information.<br />
+            Once you are happy with your bios set up, insert the DVD disc or USB 
+		  stick into your computer and reboot your computer. You'll be greeted 
+		  with the following screen. Let the timer run down if you want to boot 
+		  to the Live session.</p>
           <p> <img border="0" src="img/installer/boot1.png" /></p>
           <p> Press any key to see the next screen.</p>
           <p> <img border="0" src="img/installer/boot2.png" /></p>
-          <p> Make sure <b>Start Linux Lite</b> is highlighted, press the enter
-            key to boot the Live session. This is also a good way to check that
-            all of your hardware is supported. If you are having trouble booting
-            and you get just a black screen, try the second option, <b>Start
-              Linux Lite in safe graphics mode</b>.</p>
+          <p> Make sure <b>Start Linux Lite</b> is highlighted, press the enter 
+		  key to boot the Live session. This is also a good way to check that 
+		  all of your hardware is supported. If you are having trouble booting 
+		  and you get just a black screen, try the second option, <b>Start Linux 
+		  Lite in safe graphics mode</b>.</p>
           <p> The other options are:<br />
             <br />
             <b>Run memtest</b> - Test your computer memory for faults.<br />
-            <b>Boot the first hard disk</b> - boot the existing operating
-            system.</p>
-          <p> <b>NOTE: If you are having any trouble booting Linux Lite after
-              installation, please read through <a href="hardware.html#booting">this
-                trouble shooting guide</a>.<br />
+            <b>Boot the first hard disk</b> - boot the existing operating 
+		  system.</p>
+          <p> <b>NOTE: If you are having any trouble booting Linux Lite after 
+		  installation, please read through <a href="hardware.html#booting">this 
+		  trouble shooting guide</a>.<br />
             </b><br />
-            The computer will go through the boot up process, this may take
-            anywhere from a few seconds to a couple of minutes depending on your
-            hardware. The login for the Live user is automatic, there is no need
-            to login. An explanation of the various Menu's can be found by
-            clicking <a href="index.html#menus">here</a>.</p>
-          <p> Before we proceed, make sure you have an internet connection
-            first. Click <a href="network.html">here</a> if you need help to
-            get online before you install Linux Lite.</p>
-          <p> Once you've had a look around Linux Lite and are ready to install
-            the first step is to double click on the <b>Install Linux Lite</b>
+            The computer will go through the boot up process, this may take 
+		  anywhere from a few seconds to a couple of minutes depending on your 
+		  hardware. The login for the Live user is automatic, there is no need 
+		  to login. An explanation of the various Menu's can be found by 
+		  clicking <a href="index.html#menus">here</a>.</p>
+          <p> Before we proceed, make sure you have an internet connection 
+		  first. Click <a href="network.html">here</a> if you need help to get 
+		  online before you install Linux Lite.</p>
+          <p> Once you've had a look around Linux Lite and are ready to install 
+		  the first step is to double click on the <b>Install Linux Lite</b>
             icon on your Desktop. </p>
           <p><img alt="" src="img/installer/installicon.png" /> </p>
-          <p>The installer will then open on the desktop and display the <b>Welcome</b>
-            section of the installer. From here you will select your preferred
-            language and view release notes for this version of Linux Lite.</p>
+          <p>The installer will then open on the desktop and display the <b>
+		  Welcome</b>
+            section of the installer. From here you will select your preferred 
+		  language and view release notes for this version of Linux Lite.</p>
           <p><img alt="" src="img/installer/1-language.png" /> </p>
-          <p>After selecting continue, you are presented with some requirements
-            for the installation. Ensure that these requirements are met by
-            viewing a check mark beside them. You may also choose to download
-            any available updates while installing or install third-party
-            software during the installation. <b>NOTE: Please verify the legal
-              status of the use of the third party software in your
-              country/territory.</b></p>
-          <p><b>NOTE: </b>Generally we don't recommend ticking <b>Download
-              updates while installing</b> and <span style="font-weight: bold;">Install
-              the third-party software</span> as this will significantly slow
-            down the install process. Updating after a fresh install is
-            recommended and will save you time in the long run. A typical
-            install on today's hardware will take around 10-15 minutes. If you
-            check these 2 boxes, the install could take over an hour or longer.</p>
+          <p>After selecting continue, you are presented with some requirements 
+		  for the installation. Ensure that these requirements are met by 
+		  viewing a check mark beside them. You may also choose to download any 
+		  available updates while installing or install third-party software 
+		  during the installation. <b>NOTE: Please verify the legal status of 
+		  the use of the third party software in your country/territory.</b></p>
+          <p><b>NOTE: </b>Generally we don't recommend ticking <b>Download 
+		  updates while installing</b> and <span style="font-weight: bold;">
+		  Install the third-party software</span> as this will significantly 
+		  slow down the install process. Updating after a fresh install is 
+		  recommended and will save you time in the long run. A typical install 
+		  on today's hardware will take around 10-15 minutes. If you check these 
+		  2 boxes, the install could take over an hour or longer.</p>
           <p><img alt="" src="img/installer/2-prepare.png" /> </p>
-          <p>Now it is time to choose the method of installing Linux Lite to
-            your hard disk. You will have several options during this phase of
-            the installer.</p>
-          <p> <b>Install Linux alongside Windows</b> - otherwise known as a
-            dual boot. An option to boot from Windows or Linux Lite when your
-            computer starts.<br />
-            <b>Replace Windows with Linux</b> - completely replace Windows with
-            Linux Lite.<br />
-            <b>Something else</b> - a more advanced option. Manually set each
-            partition size. </p>
+          <p>Now it is time to choose the method of installing Linux Lite to 
+		  your hard disk. You will have several options during this phase of the 
+		  installer.</p>
+          <p> <b>Install Linux alongside Windows</b> - otherwise known as a dual 
+		  boot. An option to boot from Windows or Linux Lite when your computer 
+		  starts.<br />
+            <b>Replace Windows with Linux</b> - completely replace Windows with 
+		  Linux Lite.<br />
+            <b>Something else</b> - a more advanced option. Manually set each 
+		  partition size. </p>
           <p><img alt="" src="img/installer/3-selectinstall.png" /></p>
           <p><strong>Erase Disk and Install Linux</strong> </p>
-          <p>Upon selecting Erase Disk and Install Linux you are presented with
-            a screen displaying how your install will be represented on the hard
-            disk. This is the most simple option available and will show your
-            hard disk being completely and solely occupied by Linux Lite. You
-            may select the disk you wish to install Linux Lite to from the menu
-            labeled: <b>Select Drive</b>. You may then select <b>Install Now</b>
+          <p>Upon selecting Erase Disk and Install Linux you are presented with 
+		  a screen displaying how your install will be represented on the hard 
+		  disk. This is the most simple option available and will show your hard 
+		  disk being completely and solely occupied by Linux Lite. You may 
+		  select the disk you wish to install Linux Lite to from the menu 
+		  labeled: <b>Select Drive</b>. You may then select <b>Install Now</b>
             when you are ready to begin installing.</p>
           <p><img alt="" src="img/installer/3c-replaceinstall.png" /> </p>
           <p><strong>Install Linux alongside Windows (dual booting)</strong></p>
-          <p>If you have selected to install Linux Lite alongside an existing
-            copy of Windows, you will be greeted with a screen representing the
-            two operating systems on the disk. You may choose the disk to
-            install Linux Lite to from the top menu labeled: <b>Select Drive</b>.
-            In the main part of the window you will see your hard disk split
-            into two sections, one containing your Windows install and one for
-            your proposed Linux Lite installation. You may drag the empty space
-            between them to allocate space from one to the other as needed. You
-            may then select <b>Install Now</b> after you have made the desired
-            changes.</p>
+          <p>If you have selected to install Linux Lite alongside an existing 
+		  copy of Windows, you will be greeted with a screen representing the 
+		  two operating systems on the disk. You may choose the disk to install 
+		  Linux Lite to from the top menu labeled: <b>Select Drive</b>. In the 
+		  main part of the window you will see your hard disk split into two 
+		  sections, one containing your Windows install and one for your 
+		  proposed Linux Lite installation. You may drag the empty space between 
+		  them to allocate space from one to the other as needed. You may then 
+		  select <b>Install Now</b> after you have made the desired changes.</p>
           <p><img alt="" src="img/installer/3b-installalong.png" /> </p>
           <p><strong>Something Else</strong></p>
           <p><strong>NOTE: FOR ADVANCED USERS ONLY</strong></p>
-          <p>If the other methods do not fulfill your personal requirements for
-            installation you may select <b>Something Else</b> and manually
-            partition your hard disk. There are many options available from this
-            screen. All of your disks will be visible in a hierarchal tree view
-            in the main window. From here you can see disk devices, existing
-            partitions, and unallocated space. If your disk is new or you are
-            creating a new install in a virtual machine you may need to select <b>New
-              Partition Table</b> from the options below. This will erase the
-            disk and provide you with a clean slate. <strong>WARNING</strong>:
-            This will destroy any data on the disk selected! Another option is
-            to add a partition to the disk by selecting <b>Add</b> from the
-            button options. This option requires that there exists free space on
-            the disk with which to create the partition. When adding a
-            partition, you may select the place on the disk to create the
-            partition, the partition size, the filesystem type, and the point in
-            the filesystem that this partition will be mounted. If you need to
-            modify these attributes of a partition, you may select <b>Change</b>
-            from the button options. If there exists partitions that you wish to
-            be rid of, you can select <b>Delete</b> from the button options to
-            delete the partition. If you wish to return everything back to its
-            original state you may use the <b>Revert</b> button. <strong>NOTE</strong><b>:
-              This will only work if you have not written changes to the disk.</b></p>
-          <p>Under the partitioner there is a menu for selecting the location of
-            the boot loader's installation. You may select a drive's MBR,
-            indicated by the device name e.g. /dev/sda, or you may select a
-            partition to install the boot loader to. The safest option is to
-            install the bootloader to the MBR of the first disk as the
-            bootloader will intelligently add entries for installations of
-            Windows and other Linux installs.</p>
-          <p> <strong>NOTE: If you have any NTFS drives, it is important to
-              give these a mount point during the install. That way they will be
-              easily accessible after the installation.</strong></p>
+          <p>If the other methods do not fulfill your personal requirements for 
+		  installation you may select <b>Something Else</b> and manually 
+		  partition your hard disk. There are many options available from this 
+		  screen. All of your disks will be visible in a hierarchal tree view in 
+		  the main window. From here you can see disk devices, existing 
+		  partitions, and unallocated space. If your disk is new or you are 
+		  creating a new install in a virtual machine you may need to select <b>
+		  New Partition Table</b> from the options below. This will erase the 
+		  disk and provide you with a clean slate. <strong>WARNING</strong>: 
+		  This will destroy any data on the disk selected! Another option is to 
+		  add a partition to the disk by selecting <b>Add</b> from the button 
+		  options. This option requires that there exists free space on the disk 
+		  with which to create the partition. When adding a partition, you may 
+		  select the place on the disk to create the partition, the partition 
+		  size, the filesystem type, and the point in the filesystem that this 
+		  partition will be mounted. If you need to modify these attributes of a 
+		  partition, you may select <b>Change</b>
+            from the button options. If there exists partitions that you wish to 
+		  be rid of, you can select <b>Delete</b> from the button options to 
+		  delete the partition. If you wish to return everything back to its 
+		  original state you may use the <b>Revert</b> button. <strong>NOTE</strong><b>: 
+		  This will only work if you have not written changes to the disk.</b></p>
+          <p>Under the partitioner there is a menu for selecting the location of 
+		  the boot loader's installation. You may select a drive's MBR, 
+		  indicated by the device name e.g. /dev/sda, or you may select a 
+		  partition to install the boot loader to. The safest option is to 
+		  install the bootloader to the MBR of the first disk as the bootloader 
+		  will intelligently add entries for installations of Windows and other 
+		  Linux installs.</p>
+          <p> <strong>NOTE: If you have any NTFS drives, it is important to give 
+		  these a mount point during the install. That way they will be easily 
+		  accessible after the installation.</strong></p>
           <p><img alt="" src="img/installer/3a-manualinstall.png" /> </p>
-          <p>After completing the partitioning phase of the installation, you
-            are prompted to set up some personal details about the system. The
-            installer will continue to work in the background while you are
-            filling out this information. The first step is to select your time
-            zone. The installer may detect your time zone based on your location
-            via your ISP's information. If not, you may select your time zone by
-            either clicking on your region on the supplied map or by typing in
-            your area in the box below. </p>
+          <p>After completing the partitioning phase of the installation, you 
+		  are prompted to set up some personal details about the system. The 
+		  installer will continue to work in the background while you are 
+		  filling out this information. The first step is to select your time 
+		  zone. The installer may detect your time zone based on your location 
+		  via your ISP's information. If not, you may select your time zone by 
+		  either clicking on your region on the supplied map or by typing in 
+		  your area in the box below. </p>
           <p><img alt="" src="img/installer/4-timezone.png" /> </p>
-          <p>The next step is to select your keyboard language and layout. You
-            may select the language that your keyboard corresponds to on the
-            left and any specialized layout on the right. This is the point
-            where you may select to enable international keys on your keyboard.
-            Though, these options may be changed later.</p>
+          <p>The next step is to select your keyboard language and layout. You 
+		  may select the language that your keyboard corresponds to on the left 
+		  and any specialized layout on the right. This is the point where you 
+		  may select to enable international keys on your keyboard. Though, 
+		  these options may be changed later.</p>
           <p><img alt="" src="img/installer/5-keyboardlayout.png" /> </p>
-          <p>On the next screen, you are greeted by several forms to fill. These
-            forms include:</p>
+          <p>On the next screen, you are greeted by several forms to fill. These 
+		  forms include:</p>
           <p> <b>Your name</b> - your personal name.<br />
-            <b>Your computer's name</b> - the name that you wish to use to
-            identify the computer on your network.<br />
-            <b>Pick a username</b> - your user name that is used to login to the
-            system.<br />
-            <b>Choose a password</b> - your password that you wish to use for
-            your user and sudo password.<br />
+            <b>Your computer's name</b> - the name that you wish to use to 
+		  identify the computer on your network.<br />
+            <b>Pick a username</b> - your user name that is used to login to the 
+		  system.<br />
+            <b>Choose a password</b> - your password that you wish to use for 
+		  your user and sudo password.<br />
             <b>Confirm your password</b> - enter the above password again.</p>
-          <p> <b>NOTE: Choose a strong password, a mix of upper and lower case
-              as well as a mix of numbers and characters. An example of this
-              would be: <span class="auto-style2">y%9L2x#o</span> would be
-              considered a strong password. Use a program like <a target="_blank"
-                href="https://www.keepassx.org/">Keepassx</a> to keep all your
-              passwords safely stored and NEVER use the same password for
-              different websites.<br />
+          <p> <b>NOTE: Choose a strong password, a mix of upper and lower case 
+		  as well as a mix of numbers and characters. An example of this would 
+		  be: <span class="auto-style2">y%9L2x#o</span> would be considered a 
+		  strong password. Use a program like <a target="_blank"
+                href="https://www.keepassx.org/">Keepassx</a> to keep all your 
+		  passwords safely stored and NEVER use the same password for different 
+		  websites.<br />
               <br />
               Never compromise your security for convenience.</b></p>
-          <p> There are also options to enable auto-login for your user or have
-            the computer prompt you for a password everytime you login. Finally,
-            there is a selection for encrypting your user's Home folder for
-            extra security.</p>
+          <p>Â&nbsp;There are also options to enable auto-login for your user or have 
+		  the computer prompt you for a password everytime you login. Finally, 
+		  there is a selection for encrypting your user's Home folder for extra 
+		  security.</p>
           <p><img alt="" src="img/installer/6-userinfo.png" /> </p>
-          <p>If you have a webcam, you may encounter a screen during the install
-            asking to 'Take a photo' this feature is supported so that when you
-            first log in, your photo will be displayed as your avatar. If you
-            skip this step, you can use a .png photo of yourself, rename it to <strong>.face</strong>
+          <p>If you have a webcam, you may encounter a screen during the install 
+		  asking to 'Take a photo' this feature is supported so that when you 
+		  first log in, your photo will be displayed as your avatar. If you skip 
+		  this step, you can use a .png photo of yourself, rename it to <strong>
+		  .face</strong>
             and place it in your <strong>/home/user</strong> folder.<br />
-            After finishing all of these steps you will be greeted with a
-            slideshow detailing all of the features and software that are
-            included in this version of Linux Lite. You may allow them to play
-            on their own or navigate through them using the arrow buttons on the
-            sides of the window.</p>
+            After finishing all of these steps you will be greeted with a 
+		  slideshow detailing all of the features and software that are included 
+		  in this version of Linux Lite. You may allow them to play on their own 
+		  or navigate through them using the arrow buttons on the sides of the 
+		  window.</p>
           <p> <img width="754" height="537" src="img/installer/7-slideshow.png"
               alt="slide" /> </p>
-          <p>Once the installation is complete you will be prompted to either
-            restart your computer and begin using your newly installed Linux
-            Lite system or to continue using the testing environment on the
-            DVD/USB that you are using. If for some reason your computer hangs
-            on restart, press F4.</p>
+          <p>Once the installation is complete you will be prompted to either 
+		  restart your computer and begin using your newly installed Linux Lite 
+		  system or to continue using the testing environment on the DVD/USB 
+		  that you are using. If for some reason your computer hangs on restart, 
+		  press F4.</p>
           <p><img alt="" src="img/installer/8-finished.png" /> </p>
           <p>After a reboot you will be greeted by the login screen:</p>
           <p> <img border="0" src="img/installer/login.png" /></p>
-          <p>After you have logged in you will see the desktop. Congratulations!
-            Now that we've installed Linux Lite, lets take a look at what's
-            available on the Menu by clicking <a href="index.html#menus">here</a>.</p>
-          <p> <img width="802" height="599" src="img/installer/desktop.png" alt="desktop" /> </p>
+          <p>After you have logged in you will see the desktop. Congratulations! 
+		  Now that we've installed Linux Lite, lets take a look at what's 
+		  available on the Menu by clicking <a href="index.html#menus">here</a>.</p>
+          <p> <img width="802" height="599" src="img/installer/desktop.png" alt="desktop" />Â&nbsp;</p>
           <p><a href="#top">Top of page</a></p>
           <hr />
-          <p>   </p>
+          <p> Â&nbsp; </p>
           <p> <font size="4"><a name="language"></a>Setting your Language</font></p>
           <p> You may want to set a system wide language, here's how to do it.</p>
           <p> Click on <strong>Menu, Settings, Language Support</strong>.</p>
           <p> <img src="img/installer/lang/lang1.png" /></p>
-          <p> You will get one of two boxes pop up like the ones below, follow
-            the instructions by clicking on either <strong>Update</strong> or <strong>Install</strong>.</p>
+          <p> You will get one of two boxes pop up like the ones below, follow 
+		  the instructions by clicking on either <strong>Update</strong> or <strong>
+		  Install</strong>.</p>
           <p> <img class="auto-style3" src="img/installer/lang/lang2.png" /></p>
           <p> <img src="img/installer/lang/lang3.png" /></p>
-          <p>  You will then be prompted for your password, enter it to
-            continue.</p>
+          <p> Â&nbsp;You will then be prompted for your password, enter it to 
+		  continue.</p>
           <p> <img class="auto-style3" src="img/installer/lang/lang4.png" /></p>
           <p> Now click on the button <strong>Install / Remove Languages</strong>.</p>
           <p> <img class="auto-style3" src="img/installer/lang/lang5.png" /></p>
           <p> In this example, we'll install the <strong>Portuguese</strong>
-            language. Scroll down, find your language and tick the box next to
-            it, then click on <strong>Apply Changes</strong>.</p>
+            language. Scroll down, find your language and tick the box next to 
+		  it, then click on <strong>Apply Changes</strong>.</p>
           <p> <img class="auto-style3" src="img/installer/lang/lang6.png" /></p>
-          <p> Your computer will begin to download all the language files, this
-            may take a while.</p>
+          <p> Your computer will begin to download all the language files, this 
+		  may take a while.</p>
           <p> <img class="auto-style3" src="img/installer/lang/lang7.png" /></p>
-          <p> Once that is done, scroll to the bottom of the <strong>Language
-              for menus and windows</strong> box and drag your newly installed
-            language to the top of the list. Then click on <strong>Apply
-              System-Wide</strong>, you'll be prompted for your password again.</p>
+          <p> Once that is done, scroll to the bottom of the <strong>Language 
+		  for menus and windows</strong> box and drag your newly installed 
+		  language to the top of the list. Then click on <strong>Apply 
+		  System-Wide</strong>, you'll be prompted for your password again.</p>
           <p> <img class="auto-style3" src="img/installer/lang/lang8.png" /></p>
-          <p> Now click on the <strong>Regional Formats</strong> tab, select
-            the language you just installed, and click on <strong>Apply
-              System-Wide</strong>.</p>
+          <p> Now click on the <strong>Regional Formats</strong> tab, select the 
+		  language you just installed, and click on <strong>Apply System-Wide</strong>.</p>
           <p> <img class="auto-style3" src="img/installer/lang/lang9.png" /></p>
-          <p> Now logout and login again and you will see that your new language
-            has been applied.</p>
+          <p> Now logout and login again and you will see that your new language 
+		  has been applied.</p>
           <p> <img class="auto-style3" src="img/installer/lang/lang10.png" /></p>
-          <p> Please note that not all programs may not have your language
-            applied. If this is the case, search for that program in <strong>
-              Install/Remove Software</strong> and see if there is a language
-            pack available for it. Also note that after you have changed your
-            language, some of the <strong>Menu</strong> items may not be
-            translated properly. There is little we can do about this, an easy
-            way to rename <strong>Menu</strong> entries is by going to <strong>Menu,
-              Settings, Main Menu</strong> and editing the entries there.</p>
+          <p> Please note that not all programs may not have your language 
+		  applied. If this is the case, search for that program in <strong>
+              Install/Remove Software</strong> and see if there is a language 
+		  pack available for it. Also note that after you have changed your 
+		  language, some of the <strong>Menu</strong> items may not be 
+		  translated properly. There is little we can do about this, an easy way 
+		  to rename <strong>Menu</strong> entries is by going to <strong>Menu, 
+		  Settings, Main Menu</strong> and editing the entries there.</p>
           <p> <a href="#top">Top of page</a></p>
           <hr />
-          <p>  </p>
-          <p> <font size="4"><a name="mounting"></a><b>Mounting drives &amp;
-                partitions</b></font></p>
+          <p> Â&nbsp;</p>
+          <p> <font size="4"><a name="mounting"></a><b>Mounting drives &amp; 
+		  partitions</b></font></p>
           <p> <a href="#ext4">EXT4</a><br />
             <a href="#ext3">EXT3</a></p>
-          <p> During the installation process, you may forget to or not know how
-            to mount any other drives or partitions that you have.<br />
+          <p> During the installation process, you may forget to or not know how 
+		  to mount any other drives or partitions that you have.<br />
           </p>
           <p> <strong>NTFS</strong></p>
-          <p> First we need to make a mount point in your home folder. This is
-            where you will access those files.<br />
-            In your home folder, right click and make a new folder, in this
-            example we'll call it '<strong>ntfsfiles</strong>'. Now onto the
-            next step.<br />
+          <p> First we need to make a mount point in your home folder. This is 
+		  where you will access those files.<br />
+            In your home folder, right click and make a new folder, in this 
+		  example we'll call it '<strong>ntfsfiles</strong>'. Now onto the next 
+		  step.<br />
             <br />
             Open a terminal and type: <strong>sudo blkid</strong><br />
             <br />
-            followed by your password. This will output the uuid's for all your
-            hard drives.<br />
+            followed by your password. This will output the uuid's for all your 
+		  hard drives.<br />
             <br />
-            Take the uuid for that drive and place it into /etc/fstab, first we
-            will back up the fstab file:<br />
+            Take the uuid for that drive and place it into /etc/fstab, first we 
+		  will back up the fstab file:<br />
             <br />
             <strong>sudo cp /etc/fstab /etc/fstab.bak</strong><br />
             <br />
             In the terminal still, type in: <strong>sudo leafpad /etc/fstab</strong><br />
             <br />
-            A text file will open up. Lets say the uuid for our new ntfs drive
-            is - <strong>0463741f-a838-40c8-b40f-3dbb7f988e29</strong>. We
-            would enter this into our fstab as:<br />
+            A text file will open up. Lets say the uuid for our new ntfs drive 
+		  is - <strong>0463741f-a838-40c8-b40f-3dbb7f988e29</strong>. We would 
+		  enter this into our fstab as:<br />
             <br />
-            <strong>UUID=0463741f-a838-40c8-b40f-3dbb7f988e29
-              /home/user/ntfsfiles ntfs defaults,umask=007,uid=1000,gid=1000 0 0</strong><br />
+            <strong>UUID=0463741f-a838-40c8-b40f-3dbb7f988e29 
+		  /home/user/ntfsfiles ntfs defaults,umask=007,uid=1000,gid=1000 0 0</strong><br />
             <br />
             You can put the above line anywhere in the fstab file.<br />
-            Make sure you leave a blank line at the bottom of the fstab file
-            before you save the file.</p>
+            Make sure you leave a blank line at the bottom of the fstab file 
+		  before you save the file.</p>
           <p> <img src="img/installer/fstab_ntfs.png" /></p>
-          <p> Where <strong>user</strong> is your username. Save the file. Open
-            a terminal and type: <strong>sudo mount -a</strong><br />
+          <p> Where <strong>user</strong> is your username. Save the file. Open 
+		  a terminal and type: <strong>sudo mount -a</strong><br />
             <br />
-            If all went to plan, in <strong>/home/user/ntfsfiles</strong> you
-            should see all your files.</p>
+            If all went to plan, in <strong>/home/user/ntfsfiles</strong> you 
+		  should see all your files.</p>
           <p> <strong><a name="ext4"></a><span class="auto-style1">EXT4</span></strong></p>
-          <p> First we need to make a mount point in your home folder. This is
-            where you will access those files.<br />
-            In your home folder, right click and make a new folder, in this
-            example we'll call it '<strong>ext4files</strong>'. Now onto the
-            next step.<br />
+          <p> First we need to make a mount point in your home folder. This is 
+		  where you will access those files.<br />
+            In your home folder, right click and make a new folder, in this 
+		  example we'll call it '<strong>ext4files</strong>'. Now onto the next 
+		  step.<br />
             <br />
             Open a terminal and type: <strong>sudo blkid</strong><br />
             <br />
-            followed by your password. This will output the uuid's for all your
-            hard drives.<br />
+            followed by your password. This will output the uuid's for all your 
+		  hard drives.<br />
             <br />
-            Take the uuid for that drive and place it into /etc/fstab, first we
-            will back up the fstab file:<br />
+            Take the uuid for that drive and place it into /etc/fstab, first we 
+		  will back up the fstab file:<br />
             <br />
             <strong>sudo cp /etc/fstab /etc/fstab.bak</strong><br />
             <br />
             In the terminal still, type in: <strong>sudo leafpad /etc/fstab</strong><br />
             <br />
-            A text file will open up. Lets say the uuid for our new ext4 drive
-            is - <strong>0463741f-a838-40c8-b40f-3dbb7f988e29</strong>. We
-            would enter this into our fstab as:<br />
+            A text file will open up. Lets say the uuid for our new ext4 drive 
+		  is - <strong>0463741f-a838-40c8-b40f-3dbb7f988e29</strong>. We would 
+		  enter this into our fstab as:<br />
             <br />
-            <strong>UUID=0463741f-a838-40c8-b40f-3dbb7f988e29
-              /home/user/ext4files ext4 defaults 0 2</strong></p>
+            <strong>UUID=0463741f-a838-40c8-b40f-3dbb7f988e29 
+		  /home/user/ext4files ext4 defaults 0 2</strong></p>
           <p> You can put the above line anywhere in the fstab file.<br />
-            Make sure you leave a blank line at the bottom of the fstab file
-            before you save the file.</p>
+            Make sure you leave a blank line at the bottom of the fstab file 
+		  before you save the file.</p>
           <p> <img src="img/installer/fstab_ext4.png" /><br />
             <br />
-            Where <strong>user</strong> is your username. Save the file. Open a
-            terminal and type: <strong>sudo mount -a</strong><br />
+            Where <strong>user</strong> is your username. Save the file. Open a 
+		  terminal and type: <strong>sudo mount -a</strong><br />
             <br />
-            If all went to plan, in <strong>/home/user/ext4files</strong> you
-            should see all your files.</p>
+            If all went to plan, in <strong>/home/user/ext4files</strong> you 
+		  should see all your files.</p>
           <p> <strong><a name="ext3"></a><span class="auto-style1">EXT3</span></strong></p>
-          <p> First we need to make a mount point in your home folder. This is
-            where you will access those files.<br />
-            In your home folder, right click and make a new folder, in this
-            example we'll call it '<strong>ext3files</strong>'. Now onto the
-            next step.<br />
+          <p> First we need to make a mount point in your home folder. This is 
+		  where you will access those files.<br />
+            In your home folder, right click and make a new folder, in this 
+		  example we'll call it '<strong>ext3files</strong>'. Now onto the next 
+		  step.<br />
             <br />
             Open a terminal and type: <strong>sudo blkid</strong><br />
             <br />
-            followed by your password. This will output the uuid's for all your
-            hard drives.<br />
+            followed by your password. This will output the uuid's for all your 
+		  hard drives.<br />
             <br />
-            Take the uuid for that drive and place it into /etc/fstab, first we
-            will back up the fstab file:<br />
+            Take the uuid for that drive and place it into /etc/fstab, first we 
+		  will back up the fstab file:<br />
             <br />
             <strong>sudo cp /etc/fstab /etc/fstab.bak</strong><br />
             <br />
             In the terminal still, type in: <strong>sudo leafpad /etc/fstab</strong><br />
             <br />
-            A text file will open up. Lets say the uuid for our new ext3 drive
-            is - <strong>0463741f-a838-40c8-b40f-3dbb7f988e29</strong>. We
-            would enter this into our fstab as:<br />
+            A text file will open up. Lets say the uuid for our new ext3 drive 
+		  is - <strong>0463741f-a838-40c8-b40f-3dbb7f988e29</strong>. We would 
+		  enter this into our fstab as:<br />
             <br />
-            <strong>UUID=0463741f-a838-40c8-b40f-3dbb7f988e29
-              /home/user/ext3files ext3 defaults,errors=remount-ro 0 1</strong></p>
+            <strong>UUID=0463741f-a838-40c8-b40f-3dbb7f988e29 
+		  /home/user/ext3files ext3 defaults,errors=remount-ro 0 1</strong></p>
           <p> You can put the above line anywhere in the fstab file.<br />
-            Make sure you leave a blank line at the bottom of the fstab file
-            before you save the file.</p>
+            Make sure you leave a blank line at the bottom of the fstab file 
+		  before you save the file.</p>
           <p> <img src="img/installer/fstab_ext3.png" /><br />
             <br />
-            Where <strong>user</strong> is your username. Save the file. Open a
-            terminal and type: <strong>sudo mount -a</strong><br />
+            Where <strong>user</strong> is your username. Save the file. Open a 
+		  terminal and type: <strong>sudo mount -a</strong><br />
             <br />
-            If all went to plan, in <strong>/home/user/ext3files</strong> you
-            should see all your files.</p>
+            If all went to plan, in <strong>/home/user/ext3files</strong> you 
+		  should see all your files.</p>
           <p> <a href="#top">Top of page</a></p>
           <hr />
-          <p>  </p>
+          <p> Â&nbsp;</p>
           <p> <font size="4"><b><a name="adduser"></a>Adding another User</b></font></p>
-          <p> To add another User to Linux Lite, click on <strong>Menu,
-              Settings, User Manager</strong>.<br />
-            The click on <strong>New user</strong> and enter a name, and the
-            same password twice.</p>
-          <p> <b>NOTE: Choose a strong password, a mix of upper and lower case
-              as well as a mix of numbers and characters. An example of this
-              would be: <span class="auto-style2">y%9L2x#o</span> would be
-              considered a strong password. Use a program like <a target="_blank"
-                href="https://www.keepassx.org/">Keepassx</a> to keep all your
-              passwords safely stored and NEVER use the same password for
-              different websites and accounts.<br />
+          <p> To add another User to Linux Lite, click on <strong>Menu, 
+		  Settings, User Manager</strong>.<br />
+            The click on <strong>New user</strong> and enter a name, and the 
+		  same password twice.</p>
+          <p> <b>NOTE: Choose a strong password, a mix of upper and lower case 
+		  as well as a mix of numbers and characters. An example of this would 
+		  be: <span class="auto-style2">y%9L2x#o</span> would be considered a 
+		  strong password. Use a program like <a target="_blank"
+                href="https://www.keepassx.org/">Keepassx</a> to keep all your 
+		  passwords safely stored and NEVER use the same password for different 
+		  websites and accounts.<br />
               <br />
               Never compromise your security for convenience.</b></p>
           <p> <img class="auto-style3" src="img/installer/liteuser1.png" /></p>
-          <p> You will then be asked for your password, enter it and click on <strong>Ok</strong>
-            to finish creating the new user account. The new user will have the
-            same rights as the default user (you) <strong>except for
-              Administrator rights</strong> meaning they will be unable to
-            modify system settings such as installing software and changing
-            system files.</p>
+          <p> You will then be asked for your password, enter it and click on <strong>
+		  Ok</strong>
+            to finish creating the new user account. The new user will have the 
+		  same rights as the default user (you) <strong>except for Administrator 
+		  rights</strong> meaning they will be unable to modify system settings 
+		  such as installing software and changing system files.</p>
           <p> <img class="auto-style3" src="img/installer/liteuser2.png" /><br />
           </p>
           <p> <font size="4"><a name="userperms"></a><b>User Permissions</b></font></p>
-          <p> If you want your new user to have Administrator rights, in the
-            right hand pane scroll down to <strong>sudo</strong>, place a tick
-            in the box beside it and click on <strong>Apply</strong>. You can
-            give the new user other group permissions to by using this method,
-            but out of the box this should not be necessary as by default, the
-            application already does all this for you. Now when the new user
-            next logs in, they will have the same full system rights as you. You
-            will both be 'Administrators'.</p>
+          <p> If you want your new user to have Administrator rights, in the 
+		  right hand pane scroll down to <strong>sudo</strong>, place a tick in 
+		  the box beside it and click on <strong>Apply</strong>. You can give 
+		  the new user other group permissions to by using this method, but out 
+		  of the box this should not be necessary as by default, the application 
+		  already does all this for you. Now when the new user next logs in, 
+		  they will have the same full system rights as you. You will both be 
+		  'Administrators'.</p>
           <p> <img class="auto-style3" src="img/installer/liteuser3.png" /><br />
           </p>
           <p> <font size="4"><a name="userdel"></a><b>Removing a User</b></font></p>
-          <p> <strong>NB: Before removing a user account make sure their files
-              are backed up to a usb device or the cloud first. Removing an
-              account also removes all that persons documents, pictures, videos,
-              files etc.</strong></p>
-          <p> This is as easy as selecting the user that you want to remove from
-            the <strong>Select user</strong> drop down box, clicking on <strong>Remove
-              this user</strong> and clicking on <strong>Apply</strong>. If you
-            are asked for <strong>your</strong> password, please enter it and
-            then click <strong>Ok</strong>. Next a confirmation box will
-            appear, read the message and if you want to proceed click on <strong>Yes</strong>.
-            The user account and all their data has now been removed.</p>
+          <p> <strong>NB: Before removing a user account make sure their files 
+		  are backed up to a usb device or the cloud first. Removing an account 
+		  also removes all that persons documents, pictures, videos, files etc.</strong></p>
+          <p> This is as easy as selecting the user that you want to remove from 
+		  the <strong>Select user</strong> drop down box, clicking on <strong>
+		  Remove this user</strong> and clicking on <strong>Apply</strong>. If 
+		  you are asked for <strong>your</strong> password, please enter it and 
+		  then click <strong>Ok</strong>. Next a confirmation box will appear, 
+		  read the message and if you want to proceed click on <strong>Yes</strong>. 
+		  The user account and all their data has now been removed.</p>
           <p> <img class="auto-style3" src="img/installer/liteuser4.png" /></p>
           <p> <a href="#top">Top of page</a></p>
           <hr />
-          <p>  </p>
+          <p> Â&nbsp;</p>
           <p> <font size="4"><a name="password"></a><b>Resetting your password</b></font></p>
-          <p> Forgot your password? It happens to all of us at some stage.
-            Fortunately setting it again is fairly straight forward.<br />
+          <p> Forgot your password? It happens to all of us at some stage. 
+		  Fortunately setting it again is fairly straight forward.<br />
             Lets begin.</p>
-          <p> Boot up your computer and immediately press and hold down the
-            Shift key. You should see a screen like this.</p>
+          <p> Boot up your computer and immediately press and hold down the 
+		  Shift key. You should see a screen like this.</p>
           <p> <img border="0" src="img/installer/pass1.png" /></p>
-          <p> Next press the <b>e</b> key whilst that top line is highlighted.
-            This will take you to the next screen.<br />
-            Use your arrow keys to move down to the line highlighted in the
-            picture below. Use the arrow key until you reach the end of that
-            line.</p>
+          <p> Next press the <b>e</b> key whilst that top line is highlighted. 
+		  This will take you to the next screen.<br />
+            Use your arrow keys to move down to the line highlighted in the 
+		  picture below. Use the arrow key until you reach the end of that line.</p>
           <p> <img border="0" src="img/installer/pass2.png" /></p>
-          <p> Press the backspace key repeatedly until you remove: <b>ro splash
-              quiet $vt_handoff </b>and replace that<br />
-            text with:<b> rw init=/bin/bash </b>so that it looks like the
-            picture below.</p>
+          <p> Press the backspace key repeatedly until you remove: <b>ro splash 
+		  quiet $vt_handoff </b>and replace that<br />
+            text with:<b> rw init=/bin/bash </b>so that it looks like the 
+		  picture below.</p>
           <p> <img border="0" src="img/installer/pass3.png" /></p>
-          <p> Now press either <b>F10</b> or <b>Ctrl+X</b> to boot your
-            machine to a command prompt.</p>
+          <p> Now press either <b>F10</b> or <b>Ctrl+X</b> to boot your machine 
+		  to a command prompt.</p>
           <p> <img border="0" src="img/installer/pass4.png" /></p>
-          <p> At the prompt, type: <b>passwd jerry</b> where <b>jerry</b> is
-            your username, then press enter.</p>
+          <p> At the prompt, type: <b>passwd jerry</b> where <b>jerry</b> is 
+		  your username, then press enter.</p>
           <p> <img border="0" src="img/installer/pass5.png" /></p>
           <p> You will be asked to type in a new password twice.</p>
           <p> <img border="0" src="img/installer/pass6.png" /></p>
-          <p> Your password has now been changed. Now we are ready to save those
-            changes, then reboot the computer.<br />
+          <p> Your password has now been changed. Now we are ready to save those 
+		  changes, then reboot the computer.<br />
             Type in: <b>sync</b> then hit enter. Then type in: <b>reboot -f</b></p>
           <p> <img border="0" src="img/installer/pass7.png" /></p>
-          <p> Your computer will reboot. If you see the screen shown below
-            again, just hit enter. This is normal and won't appear the next time
-            you reboot your computer. You may also not see the boot animation on
-            this boot, this to is normal and will reappear next time you boot
-            up.</p>
+          <p> Your computer will reboot. If you see the screen shown below 
+		  again, just hit enter. This is normal and won't appear the next time 
+		  you reboot your computer. You may also not see the boot animation on 
+		  this boot, this to is normal and will reappear next time you boot up.</p>
           <p> <img border="0" src="img/installer/pass1.png" /></p>
           <p> Now login with your password.</p>
           <p> <img border="0" src="img/installer/login2.png" /></p>
           <p> <a href="#top">Top of page</a></p>
           <hr />
-          <p>  </p>
+          <p> Â&nbsp;</p>
           <p> <font size="4"><a name="terminal"></a><b>Terminal Basics</b></font></p>
-          <p> Linux Lite is designed to be such that new users won't have to
-            venture into the terminal to much. But, there will be some occasions
-            where we need to run the odd terminal command. The following is a
-            very basic introduction to some of the more common terminal commands
-            that will help you to navigate around your computer, should you need
-            to.</p>
-          <p> <b>TIP: instead of typing out the entire name of a file or
-              folder, type the first few letters and hit your TAB key, this will
-              auto complete the name. This will save you lots of time but be
-              careful and make sure you have typed the correct file name. In the
-              examples below 'directory' also means 'folder'.</b></p>
+          <p> Linux Lite is designed to be such that new users won't have to 
+		  venture into the terminal to much. But, there will be some occasions 
+		  where we need to run the odd terminal command. The following is a very 
+		  basic introduction to some of the more common terminal commands that 
+		  will help you to navigate around your computer, should you need to.</p>
+          <p> <b>TIP: instead of typing out the entire name of a file or folder, 
+		  type the first few letters and hit your TAB key, this will auto 
+		  complete the name. This will save you lots of time but be careful and 
+		  make sure you have typed the correct file name. In the examples below 
+		  'directory' also means 'folder'.</b></p>
           <p> <b>ls</b> - display a list of files in the current directory</p>
-          <p> <b>ls -la</b> - a more comprehensive display of file properties
-            in the current directory, including hidden files</p>
+          <p> <b>ls -la</b> - a more comprehensive display of file properties in 
+		  the current directory, including hidden files</p>
           <p> <b>pwd</b> - shows you the current directory you are in</p>
           <p> <b>cd</b> - change directory, change to another directory</p>
           <p> <b>cd ..</b> - go back one directory</p>
@@ -576,68 +576,68 @@
           <p> <img border="0" src="img/installer/term-basics4.png" /></p>
           <p> <a href="#top">Top of page</a></p>
           <hr />
-          <p> </p>
+          <p>Â&nbsp;</p>
           <p> <font size="4"><a name="themes"></a><b>Themes &amp; Icon sets</b></font></p>
-          <p>The default theme for Linux Lite is <b>Mediterranean Light</b>.
-            The default icon set is <b>Faenza</b>.<br />
-            There are some additional Theme and Icon sets in Linux Lite. Go to <b>Menu,
-              Settings, Settings Manager</b>.<br />
-            There are 2 main areas in the Settings Manager that take care of
-            these settings - <b>Appearance</b> and <b>Window Manager</b>.</p>
+          <p>The default theme for Linux Lite is <b>Mediterranean Light</b>. The 
+		  default icon set is <b>Faenza</b>.<br />
+            There are some additional Theme and Icon sets in Linux Lite. Go to <b>
+		  Menu, Settings, Settings Manager</b>.<br />
+            There are 2 main areas in the Settings Manager that take care of 
+		  these settings - <b>Appearance</b> and <b>Window Manager</b>.</p>
           <p><img border="0" src="img/installer/themes1.png" /></p>
           <p><br />
             Click on <b>Appearance</b>. Here you will see the <b>Style</b> and
             <b>Icons</b> tabs.</p>
           <p><img border="0" src="img/installer/themes2.png" /></p>
           <p><img border="0" src="img/installer/themes3.png" /></p>
-          <p>As you click through the various themes and icon sets you will
-            notice visual changes on your computer.<br />
-            Close <b>Settings Manager</b> before moving onto the next part of
-            this tutorial.</p>
+          <p>As you click through the various themes and icon sets you will 
+		  notice visual changes on your computer.<br />
+            Close <b>Settings Manager</b> before moving onto the next part of 
+		  this tutorial.</p>
           <p>This next section will show you how to apply new themes and icons.</p>
           <p> <a href="#top">Top of page</a></p>
           <hr />
-          <p> </p>
+          <p>Â&nbsp;</p>
           <p><b><font size="4">Applying a new Theme</font></b></p>
           <p>Head over to the <a href="http://xfce-look.org/index.php?xcontentmode=15x100x420"
-              target="_blank"> XFCE Look</a> website and choose theme of your
-            liking.</p>
-          <p><b>NOTE: Not all themes from there will work as you would expect,
-              please read all of the documentation before attempting to apply a
-              new theme. Some make installation easy via a PPA, this is a
-              preferable method to the one shown here. Click <a href="software.html#ppa">here</a>
-              for more information on how to install a new PPA. Whichever theme
-              you choose, make sure that it mentions XFCE compatability.</b></p>
+              target="_blank"> XFCE Look</a> website and choose theme of your 
+		  liking.</p>
+          <p><b>NOTE: Not all themes from there will work as you would expect, 
+		  please read all of the documentation before attempting to apply a new 
+		  theme. Some make installation easy via a PPA, this is a preferable 
+		  method to the one shown here. Click <a href="software.html#ppa">here</a>
+              for more information on how to install a new PPA. Whichever theme 
+		  you choose, make sure that it mentions XFCE compatability.</b></p>
           <p>The first thing we need to do is open up our home folder. Click on
             <b>View, Show Hidden Files</b>.<br />
-            Right click somewhere in your home folder, <b>Create Folder</b>,
-            make a folder called <b>.themes </b>(you will only need to do this
-            once.) This is where we will copy the new theme to.</p>
+            Right click somewhere in your home folder, <b>Create Folder</b>, 
+		  make a folder called <b>.themes </b>(you will only need to do this 
+		  once.) This is where we will copy the new theme to.</p>
           <p><img border="1" src="img/installer/themes4.png" /></p>
-          <p>Download a theme of your choosing. In this example we will choose
-            the <a href="http://xfce-look.org/content/show.php/Redbird?content=158228"
+          <p>Download a theme of your choosing. In this example we will choose 
+		  the <a href="http://xfce-look.org/content/show.php/Redbird?content=158228"
               target="_blank">Redbird</a> theme.</p>
-          <p><b>NOTE: Each theme may come with a specific set of install
-              instructions, if they do, please follow those instructions.</b></p>
-          <p>Next extract the theme you just downloaded (right click, <b>Extract
-              Here</b>)</p>
+          <p><b>NOTE: Each theme may come with a specific set of install 
+		  instructions, if they do, please follow those instructions.</b></p>
+          <p>Next extract the theme you just downloaded (right click, <b>Extract 
+		  Here</b>)</p>
           <p><img border="1" src="img/installer/themes5.png" /></p>
-          <p>Copy the Redbird theme folder to the <b>.themes</b> folder in your
-            home folder.</p>
+          <p>Copy the Redbird theme folder to the <b>.themes</b> folder in your 
+		  home folder.</p>
           <p><img border="1" src="img/installer/themes6.png" /></p>
-          <p>Now go to <b>Menu, Settings, Settings Manager</b>. There are 2
-            places we need to apply the new theme, <b>Appearance</b> and <b>Window
-              Manager</b>.</p>
+          <p>Now go to <b>Menu, Settings, Settings Manager</b>. There are 2 
+		  places we need to apply the new theme, <b>Appearance</b> and <b>Window 
+		  Manager</b>.</p>
           <p><img border="1" src="img/installer/themes7.png" /></p>
           <p>First we'll click into <b>Appearance</b>. Select <b>Redbird</b>
             from the list.</p>
           <p><img border="1" src="img/installer/themes8.png" /></p>
-          <p>Click on <b>Overview</b> in the bottom left to go back to the <b>Settings
-              Manager</b>.<br />
+          <p>Click on <b>Overview</b> in the bottom left to go back to the <b>
+		  Settings Manager</b>.<br />
             Now click into <b>Window Manager</b> and select <b>Redbird</b>.</p>
           <p><img border="1" src="img/installer/themes9.png" /></p>
-          <p>We're almost there. In the picture below you can see that it hasn't
-            quite displayed our tray icons properly.</p>
+          <p>We're almost there. In the picture below you can see that it hasn't 
+		  quite displayed our tray icons properly.</p>
           <p><img border="0" src="img/installer/themes10.png" /></p>
           <p>Lets click on <b>Menu, Turn Off Computer,</b> and <b>Log Out</b>.<br />
             Log in again and our new theme now displays properly.</p>
@@ -645,33 +645,34 @@
           <p>
             <a href="#top">Top of page</a></p>
           <hr />
-          <p> </p>
+          <p>Â&nbsp;</p>
           <p><b><font size="4">Applying a new Icon set</font></b></p>
-          <p>Head over to the <a href="http://gnome-look.org/" target="_blank">Gnome
-              Look</a> website and choose an <a href="http://gnome-look.org/index.php?xcontentmode=121"
+          <p>Head over to the <a href="http://gnome-look.org/" target="_blank">
+		  Gnome Look</a> website and choose an <a href="http://gnome-look.org/index.php?xcontentmode=121"
               target="_blank"> Icon set</a> of your liking.</p>
-          <p><b>NOTE: Not all icon sets from there will work as you would
-              expect, please read all of the documentation before attempting to
-              apply a new icon set. Some make installation easy via a PPA, this
-              is a preferable method to the one shown here. Click <a href="software.html#ppa">here</a>
+          <p><b>NOTE: Not all icon sets from there will work as you would 
+		  expect, please read all of the documentation before attempting to 
+		  apply a new icon set. Some make installation easy via a PPA, this is a 
+		  preferable method to the one shown here. Click <a href="software.html#ppa">
+		  here</a>
               for more information on how to install a new PPA.<br />
             </b><br />
-            The first thing we need to do is open up our home folder. Click on <b>View,
-              Show Hidden Files</b>.<br />
-            Right click somewhere in your home folder, <b>Create Folder</b>,
-            make a folder called <b>.icons </b>(you will only need to do this
-            once.) This is where we will copy the new Icon set to.</p>
+            The first thing we need to do is open up our home folder. Click on <b>
+		  View, Show Hidden Files</b>.<br />
+            Right click somewhere in your home folder, <b>Create Folder</b>, 
+		  make a folder called <b>.icons </b>(you will only need to do this 
+		  once.) This is where we will copy the new Icon set to.</p>
           <p><img border="1" src="img/installer/icons1.png" /></p>
-          <p>Download an icon set of your choosing. In this example we will
-            choose the <a href="http://gnome-look.org/content/show.php/Clarity?content=135654"
+          <p>Download an icon set of your choosing. In this example we will 
+		  choose the <a href="http://gnome-look.org/content/show.php/Clarity?content=135654"
               target="_blank"> Clarity Icon Set</a>.</p>
-          <p><b>NOTE: Each icon set may come with a specific set of install
-              instructions, if they do, please follow those instructions.</b></p>
-          <p>Next extract the icon set you just downloaded (right click, <b>Extract
-              Here</b>)</p>
+          <p><b>NOTE: Each icon set may come with a specific set of install 
+		  instructions, if they do, please follow those instructions.</b></p>
+          <p>Next extract the icon set you just downloaded (right click, <b>
+		  Extract Here</b>)</p>
           <p><img border="1" src="img/installer/icons2.png" /></p>
-          <p>Copy the icon set folder to the <b>.icons</b> folder in your home
-            folder.</p>
+          <p>Copy the icon set folder to the <b>.icons</b> folder in your home 
+		  folder.</p>
           <p><img border="1" src="img/installer/icons3.png" /></p>
           <p>Now go to <b>Menu, Settings, Appearance</b>. Select the <b> Icons</b>
             tab and click on your new Icon set.</p>
